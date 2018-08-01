@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="product_public_category_form_view_price" model="ir.ui.view">
+		<field name="name">wk.product.price.form</field>
+		<field name="model">wk.product.price</field>
+		<field name="arch" type="xml">
+			<form string="Product Price">
+				<sheet>
+					<div class= "oe_left">
+						<group col="4">
+							<field name="name"/>
+							<field name="sequence"/>
+							<field name="min_price"/>
+							<field name="max_price"/>
+						</group>
+					</div>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id= "product_public_category_tree_view_price" model= "ir.ui.view">
+		<field name= "name">wk.product.price.tree</field>
+		<field name= "model">wk.product.price</field>
+		<field name= "arch" type= "xml">
+			<tree string="Product Price" >
+				<field name= "name"/>
+			</tree>
+		</field>
+	</record>
+	<record id= "wk_website_product_price_action" model= "ir.actions.act_window">
+		<field name= "name">Product Price Configuration</field>
+		<field name= "type">ir.actions.act_window</field>
+		<field name= "res_model">wk.product.price</field>
+		<field name= "view_type">form</field>
+		<field name= "view_mode">kanban,tree,form</field>
+		<field name= "view_id" eval= "False"/>
+		<field name= "help" type= "html">
+			<p class= "oe_view_nocontent_create">
+				Click to define a new Price.
+			</p>
+		</field>
+	</record>
+	<record id="product_category_tree_view_price" model="ir.ui.view">
+		<field name="name">product.category.tree</field>
+		<field name="model">wk.product.price</field>
+		<field name="field_parent">child_id</field>
+		<field name="arch" type="xml">
+			<tree toolbar="True" string="Product Categories">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record id="product_price_action" model="ir.actions.act_window">
+		<field name="name">Products By Price</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">wk.product.price</field>
+		<field name="view_type">tree</field>
+		<field name="view_id" ref="product_public_category_tree_view_price"/>
+		<field name="help" type="html">
+			<p>
+				Here is a list of all your products classified by Price.
+			</p>
+		</field>
+	</record>
+	<menuitem id="menu_product_price_root_menu_price"
+		parent="website.menu_website_configuration" sequence="13"  name="Website Product Configuration" string="Website Product Configuration"/>
+	<menuitem id="menu_product_price_config_price"  parent="menu_product_price_root_menu_price" sequence="2"  name="Prices" string="Prices"
+		action="wk_website_product_price_action"/>
+		
+<!-- 	============================| leg.style |============================	-->
+	<record id="leg_style_form_view" model="ir.ui.view">
+		<field name="name">leg.style.form</field>
+		<field name="model">leg.style</field>
+		<field name="arch" type="xml">
+			<form string="Leg Style">
+				<sheet>
+					<group col="4">
+						<field name="name"/>
+						<field name="sequence"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="leg_style_tree_view" model= "ir.ui.view">
+		<field name= "name">leg.style.tree</field>
+		<field name= "model">leg.style</field>
+		<field name= "arch" type= "xml">
+			<tree string="Leg Style" editable="bottom">
+				<field name= "name"/>
+				<field name="sequence"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id= "action_leg_style_view" model= "ir.actions.act_window">
+		<field name= "name">Product Leg Style</field>
+		<field name= "type">ir.actions.act_window</field>
+		<field name= "res_model">leg.style</field>
+		<field name= "view_type">form</field>
+		<field name= "view_mode">tree,form</field>
+		<field name= "view_id" eval= "leg_style_tree_view"/>
+	</record>
+	
+	<menuitem id="menu_leg_style_sub"  parent="menu_product_price_root_menu_price" sequence="2"  name="Leg Style" string="Leg Style"
+		action="action_leg_style_view"/>
+
+<!-- 	============================| leg.style |============================	-->
+	<record id="table_style_form_view" model="ir.ui.view">
+		<field name="name">table.style.form</field>
+		<field name="model">table.style</field>
+		<field name="arch" type="xml">
+			<form string="Table Style">
+				<sheet>
+					<group col="4">
+						<field name="name"/>
+						<field name="sequence"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="table_style_tree_view" model= "ir.ui.view">
+		<field name= "name">table.style.tree</field>
+		<field name= "model">table.style</field>
+		<field name= "arch" type= "xml">
+			<tree string="Leg Style" editable="bottom">
+				<field name= "name"/>
+				<field name="sequence"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="action_table_style_view" model= "ir.actions.act_window">
+		<field name= "name">Product Table Style</field>
+		<field name= "type">ir.actions.act_window</field>
+		<field name= "res_model">table.style</field>
+		<field name= "view_type">form</field>
+		<field name= "view_mode">tree,form</field>
+		<field name= "view_id" eval="table_style_tree_view"/>
+	</record>
+	
+	<menuitem id="menu_table_style_sub"  parent="menu_product_price_root_menu_price" sequence="3"  name="Table Style" string="Table Style"
+		action="action_table_style_view"/>
+		
+	
+<!-- 	============================| table.finish |============================	-->
+	<record id="table_finish_form_view" model="ir.ui.view">
+		<field name="name">table.finish.form</field>
+		<field name="model">table.finish</field>
+		<field name="arch" type="xml">
+			<form string="Table Finish">
+				<sheet>
+					<group col="4">
+						<field name="name"/>
+						<field name="sequence"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="table_finish_tree_view" model= "ir.ui.view">
+		<field name= "name">table.style.tree</field>
+		<field name= "model">table.style</field>
+		<field name= "arch" type= "xml">
+			<tree string="Table Finish" editable="bottom">
+				<field name= "name"/>
+				<field name="sequence"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="action_table_finish_view" model= "ir.actions.act_window">
+		<field name= "name">Product Table Finish</field>
+		<field name= "type">ir.actions.act_window</field>
+		<field name= "res_model">table.finish</field>
+		<field name= "view_type">form</field>
+		<field name= "view_mode">tree,form</field>
+		<field name= "view_id" eval="table_finish_tree_view"/>
+	</record>
+	
+	<menuitem id="menu_table_finish_sub"  parent="menu_product_price_root_menu_price" sequence="4"  name="Table Finish" string="Table Finish"
+		action="action_table_finish_view"/>
+</odoo>

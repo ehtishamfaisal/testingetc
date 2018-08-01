@@ -1,0 +1,316 @@
+.as-product {
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+	padding: 10px;
+	border-radius: 3px;
+	.asp-inner{
+		 
+		.pro-img{
+			border: none;
+			height: 243px;
+			img{
+				 
+			}
+			.preview-image{
+				
+				.product-hover-img {
+
+					img {
+						 
+					}
+				}
+			}
+			 
+		}
+
+		.pro-action{
+				.add_to_wishlist{
+					width: 40px;
+					height: 40px;
+					border-radius: 0;
+					position: relative;
+					top: auto;
+					right: auto;
+					text-align: center;
+					z-index: 9;
+					line-height: 40px;
+					display: inline-block;
+					background: @as-theme;
+					vertical-align: middle;
+					.transition(all, 0.5s, ease);
+					border: 1px solid @as-theme;
+					.fa{
+						margin-left: 0;
+						color: @as-light;
+						font-size: @as-font-size * 2 - 8;
+					}
+					span{
+						display: none;
+					}
+					&:hover{
+						background: @as-dark;
+						color: @as-theme;
+						border: 1px solid @as-dark;
+						.fa{
+							color: @as-light;
+						}
+					}
+				}
+				a.btn-cart{
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					vertical-align: middle;
+				}
+				.button.btn-cart{
+					height: 40px;
+					border-radius: 0;
+					position: relative;
+					top: auto;
+					right: auto;
+					text-align: center;
+					z-index: 9;
+					line-height: 38px;
+					display: inline-block;
+					background: @as-theme;
+					border: 1px solid @as-theme;
+					vertical-align: middle;
+					color: @as-light;
+					padding: 0 15px;
+					.transition(all, 0.5s, ease);
+					.fa{
+						margin-left: 0;
+						color: @as-light;
+						font-size: @as-font-size * 2 - 8;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					span{
+					 	display: inline-block;
+						vertical-align: middle;
+						margin-right: 8px;
+					}
+					&:hover{
+						background: @as-dark;
+						color: @as-light;
+						border: 1px solid @as-dark;
+						.fa{
+							color: @as-light;
+						}
+					}
+					
+				}
+			}
+
+		.pro-info{
+			width: 100%;
+			float: left;
+			text-align: left;
+			padding:10px 0 0 0;
+			h3{
+				font-size: @as-font-size;
+				font-weight: 300;
+				margin: 0;
+				padding: 0 0 10px;
+				white-space: nowrap;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				strong{
+					font-weight: 600;
+				}
+				a{
+					color:darken(@as-body, 5%); 
+				}
+			}
+			.product_price{
+				width: 100%;
+				float: left;
+				font-size: @as-font-size;
+				position: relative;
+				b{
+					font-weight: 600;
+				}
+
+				.text-danger{
+				 color: #d40707; 
+				}
+			}
+			.o_rating_card{
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+				margin-top: 5px;
+				float: left;
+				.well{
+					float: none;
+					text-align: left;
+				}
+				.rating{
+					float: none;
+					.o_rating_star_card{
+						float: none;
+						margin: 0;
+						.stars {
+							margin: 0;
+							.fa{
+								color: @as-theme;
+								font-size: @as-font-size-base + 1;
+								margin: 0;
+							}
+						}
+					}
+				}
+				.fa-user{
+					display: none;
+				}
+				.popover{
+					display: none !important;
+				}
+			}
+		}
+		&:hover{
+			.pro-action{
+				bottom: 0;
+			}
+		}
+	}
+	&:hover{
+		box-shadow: 0px 0px 46px 12px rgba(0, 0, 0, 0.09);
+		.asp-inner{
+			.pro-info{
+				h3{
+					a{
+						color:@as-theme;
+					}
+				}
+			}
+			.pro-action {
+			 
+			}
+			.pro-img {
+				&:after{
+						z-index: 9 !important;	
+						opacity: 1;
+					}
+			}
+			.preview-image{
+				.product-hover-img{
+					top: 0;
+				}
+			}	
+		}
+	}
+}
+
+
+/* as-product
+------------------*/
+
+#products_grid{
+	.as-product-list {
+		letter-spacing: -0.31em;
+		.col-sm-6{
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+			letter-spacing: normal;
+			@media (max-width:767px){
+				width: 50%;
+			}
+			@media (max-width:479px){
+				width: 100%;
+			}
+		}
+	}
+	&.list-view-box,
+	.oe_list{
+		border:none;
+		.as-product{
+			.pro-img{
+				width: 31%;
+				float: left;
+				background: darken(@as-light, 4%);
+			}
+			.pro-action{
+				position: relative;
+				left: auto;
+				right: auto;
+				text-align: left;
+				bottom: auto;
+				a.btn-cart{
+					padding: 0;
+					margin-right: 8px;
+					vertical-align: middle;
+				}
+				.add_to_wishlist{
+					width: 40px;
+					height: 40px;
+					border-radius: 0;
+					position: relative;
+					top: auto;
+					right: auto;
+					text-align: center;
+					z-index: 9;
+					line-height: 40px;
+					display: inline-block;
+					background: @as-theme;
+					vertical-align: middle;
+					.transition(all, 0.5s, ease);
+					border: 1px solid @as-theme;
+					font-size:20px;
+					color: @as-light;
+					
+					span{
+						display: none;
+					}
+					&:hover{
+						background: @as-dark;
+						color: @as-theme;
+						border: 1px solid @as-dark;
+						color: @as-light;
+						
+					}
+				}
+			}
+			.pro-info{
+				width: 69%;
+				float: left;
+				padding:0 20px;
+				background: transparent;
+				text-align: left;
+				.product_price{
+					width: 100%;
+				}
+				.o_rating_card {
+					width: 100%;
+					.rating {
+						.o_rating_star_card{
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		.as-product-list{
+			.col-md-4{
+				width: 100%;
+				
+			}
+		}
+	}
+}
+
+
+.owl-item{
+	.as-product{
+		box-shadow: none !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+	}	
+}
+
+
+.multi_tab_product_snippet .as-product .asp-inner .pro-info .pro-action .button { background: none; color: @as-theme; border: none !important;  }
+.multi_tab_product_snippet .as-product .asp-inner .pro-info .pro-action .button .fa { display: none; }

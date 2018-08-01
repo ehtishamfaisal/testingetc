@@ -1,0 +1,73 @@
+/*BG micin*/
+
+.bg-img(@img-name){
+	background: url('@{img-path}@{img-name}') no-repeat scroll 0 0;
+}
+/*Border radiuse*/
+.border-radius(@radius) {
+	        border-radius:@radius;
+	-webkit-border-radius:@radius;
+	   -moz-border-radius:@radius;
+         -o-border-radius:@radius;
+}
+
+.bg-size(@cover){
+  background-size: @cover;
+  -moz-background-size: @cover;
+  -webkit-background-size: @cover;
+  -o-background-size: @cover;
+}
+
+/* Transition */
+.transition(@all, @s, @ease){
+   		transition: @all @s @ease;
+-webkit-transition: @all @s @ease;
+   -moz-transition: @all @s @ease;
+     -o-transition: @all @s @ease;
+}
+.transform-img-hover(@scale){
+transform: scale(@scale);
+-moz-transform: scale(@scale);
+-webkit-transform: scale(@scale);
+-o-transform: scale(@scale);
+}
+
+/* Media */
+
+
+/* Hover menu*/
+.menu-hover-effect(@padding){
+  visibility: hidden;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  background: @as-light;
+  .transition(all, 0.5s, ease);
+  padding: @padding;
+  box-shadow: 0 4px 12px 0 fade(@as-dark, 20);
+  border-bottom: 5px solid @as-theme;
+}
+.menu-hover-effect-open{
+  visibility: visible;
+  opacity: 1;
+  top: 101%;
+}
+.menu-hover-left-effect(@padding){
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: -110%;
+  opacity: 0;
+  background: @as-light;
+  .transition(all, 0.2s, ease);
+  padding: @padding;
+  box-shadow: 0 4px 12px 0 fade(@as-dark, 20);
+  border-bottom: 5px solid @as-theme;
+}
+.menu-hover-effect-left-open{
+ visibility: visible;
+  opacity: 1;
+  right: -60%; 
+}

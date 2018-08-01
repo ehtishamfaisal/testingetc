@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="assets_editor_product_slider" inherit_id="website.assets_editor" name="Editor assets">
+      <xpath expr="." position="inside">
+          <script type="text/javascript" src="/theme_watch/static/src/js/website.editor.js" ></script>       
+      </xpath>
+  </template>
+  
+  <template id="assent_front_product" inherit_id="website.assets_frontend">
+    <xpath expr="." position="inside">
+     	<script type="text/javascript"  src="/theme_watch/static/src/js/website.front.js"></script>          
+    </xpath>
+</template>
+<template name="Product Slider" id="product_slider">
+    <section class="tqt-products-slider">
+        <div class="tqt_products_slider" data-product-count="0" data-slider-type="" contentEditable="false">
+            <div class="container">
+                    <div class="quality_product_slide" contentEditable="false">
+                        <div class="col-md-12">
+                				<div class="seaction-head">
+                    			<h1>New Arrivals</h1>
+                				</div>                        
+                		</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</template>
+
+<template id="snippet_options" inherit_id="website.snippet_options">
+    <xpath expr="." position="inside">
+        <div data-js='advance_product_slider'
+            data-selector=".tqt_products_slider">
+            <li data-product_slider_configure="">
+                <a class="js_products_slider">Modify</a>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+<!-- Product Slider Block -->
+<template name="Product Slider" id="product_slider_content">
+            <div class="container" contentEditable="false">
+                <div class="quality_product_slide">
+				<t t-if="header">
+                <div class="seaction-head">
+                    <h1><t t-esc="header"/></h1>
+                </div>
+                </t>
+                <t t-if="not header">
+                <div class="seaction-head">
+                    <h1>New Arrivals</h1>
+                </div>                
+                </t>
+                <div t-att-id="slider_id" t-attf-class="tqt-pro-slide owl-carousel" t-if="products">
+                        <t t-foreach="products" t-as="product">                
+                        <div class="tqt-product as-product">
+                        	<div class="asp-inner">
+                             <a t-attf-href="/shop/product/#{slug(product)}">
+                                <div class="pro-img">                                                
+                                	<img t-att-src="website.image_url(product, 'image', '300x300')" title="" alt="" />
+								</div>
+                                <div class="pro-info">                                                                               
+                                    <h3 t-if="show_product_name"><a t-attf-href="/shop/product/#{slug(product)}">
+                                                    <t t-esc="product.name"/>
+                                                </a></h3>
+                                    <div class="price" t-if="show_product_price">
+										<div class="price-box"> 
+                                                <span class="special-price">
+                                                    <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">
+		                    <b>
+		                        <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+		                            <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+		                        </t>
+
+		                        <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+		                        <span itemprop="price" style="display:none;" t-esc="product.website_price" />
+		                        <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+		                    </b>
+		                </div>
+                                                </span>
+                                            </div>
+                                    </div>
+                                    <div class="pro-action" t-if="show_cart">
+  										<form action="/shop/cart/update" method="post">
+											<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+    										<input name="product_id" t-att-value="product.product_variant_id.id" type="hidden"/>
+                                        	<button class="button btn-cart"><span>Add to Cart</span> <i class="fa fa-shopping-cart"></i></button>
+										</form>
+                                    </div>
+                                </div>
+                            </a>
+							</div>
+                        </div>
+                        </t> 
+                </div>
+                </div>
+                </div>
+</template>
+
+<!-- End Product Slider -->
+
+<template id="place_into_bar" inherit_id="website.snippets" name="Place Snippet into bar">
+  <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+      <t t-snippet="theme_watch.product_slider"
+       t-thumbnail="/theme_watch/static/src/icon/product-slider.png"/>
+  </xpath>
+ </template>
+</odoo>

@@ -1,0 +1,2007 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template name="Main Slider" id="theme_slider">
+    <div id="as-home-slider" class="carousel s_banners_theme_slider slide as-home-slider" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#as-home-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#as-home-slider" data-slide-to="1"></li>
+        <li data-target="#as-home-slider" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item item1 active">
+          <div class="container">
+            <blockquote class="col-md-6 col-sm-6 col-xs-6"> 
+              <h2>Lorem Ipsum is simply</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <div class="btn-box">
+                <a href="#">SHOP NOW</a>
+              </div>
+            </blockquote>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="img">
+                <img src="/theme_watch/static/src/img/banner1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="item item2">
+          <div class="container">
+            <blockquote class="col-md-6 col-sm-6 col-xs-6"> 
+              <h2>Lorem Ipsum is simply</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <div class="btn-box">
+                <a href="#">SHOP NOW</a>
+              </div>
+            </blockquote>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="img">
+                <img src="/theme_watch/static/src/img/banner2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item3">
+          <div class="container">
+            <blockquote class="col-md-6 col-sm-6 col-xs-6"> 
+              <h2>Lorem Ipsum is simply </h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <div class="btn-box">
+                <a href="#">SHOP NOW</a>
+              </div>
+            </blockquote>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="img">
+                <img src="/theme_watch/static/src/img/banner3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!-- Controls -->
+        <a class="left carousel-control" data-target="#as-home-slider" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-target="#as-home-slider" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+</template>
+
+<!-- Animation Slider -->
+<template id="animated_slider" name="Animated Slider">
+  <section class="as-animated-slider">
+<section id="main-slider" class="carousel slide s_banners_animated_slider" data-ride="carousel" data-interval="8000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+    <li data-target="#main-slider" data-slide-to="1"></li>
+    <li data-target="#main-slider" data-slide-to="2"></li>
+  </ol>
+
+<div class="carousel-inner">
+    <div class="item active" style="background-image: url(/theme_watch/static/src/img/bg1.jpg)">
+        <div class="container">
+            <blockquote class="carousel-content">
+                <h2 class="animation animated-item-2"> A crown for every achievement </h2>
+                <h1 class="animation animated-item-1">rolex</h1>
+                <a class="btn-slide animation animated-item-3" href="#">Shope Now</a>
+            </blockquote>
+        </div>
+    </div><!--/.item-->
+
+    <div class="item" style="background-image: url(/theme_watch/static/src/img/bg2.jpg)">
+        <div class="container">
+            <blockquote class="carousel-content">
+                <h2 class="animation animated-item-2">What's your style!</h2>
+                <h1 class="animation animated-item-1">titan</h1>
+                <a class="btn-slide animation animated-item-3" href="#">Shope Now</a>
+            </blockquote>
+        </div>
+    </div><!--/.item-->
+
+    <div class="item" style="background-image: url(/theme_watch/static/src/img/bg3.jpg)">
+        <div class="container">                    
+            <blockquote class="carousel-content">
+                <h2 class="animation animated-item-2">What's your style!</h2>
+                <h1 class="animation animated-item-1">Fastrack</h1>
+                <a class="btn-slide animation animated-item-3" href="#">Shope Now</a>
+            </blockquote>
+        </div>
+    </div><!--/.item-->
+</div><!--/.carousel-inner-->
+
+  <!-- Controls -->
+  <a class="left carousel-control" data-target="#main-slider" role="button" data-slide="prev">
+    <span class="fa fa-angle-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" data-target="#main-slider" role="button" data-slide="next">
+    <span class="fa fa-angle-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</section>
+</section>
+</template>
+<!-- End -->
+
+
+<!-- Slider with Banner -->
+<template id="home_slider01" name="Slider With Banner">
+  <section class="as-home-slider01">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8"> 
+            <div id="as_home_slider01" class="carousel slide s_banners_home_slider01" data-ride="carousel" data-interval="8000">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#as_home_slider01" data-slide-to="0" class="active"></li>
+                <li data-target="#as_home_slider01" data-slide-to="1"></li>
+                <li data-target="#as_home_slider01" data-slide-to="2"></li>
+              </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/theme_watch/static/src/img/home2-3.jpg" alt="" />
+                </div><!--/.item-->
+
+                <div class="item">
+                    <img src="/theme_watch/static/src/img/home2-2.jpg" alt="" />
+                </div><!--/.item-->
+
+                <div class="item">
+                  <img src="/theme_watch/static/src/img/home2-1.jpg" alt="" />                    
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+
+            
+      <!-- Controls -->
+        <a class="left carousel-control" data-target="#as_home_slider01" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-target="#as_home_slider01" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4"> 
+          <div class="as-hs-banner1"> 
+            <img src="/theme_watch/static/src/img/home2-r2.jpg" alt="" />
+          </div>
+          <div class="as-hs-banner2"> 
+            <img src="/theme_watch/static/src/img/home2-r3.jpg" alt="" />
+          </div>
+          <div class="as-hs-banner3"> 
+            <img src="/theme_watch/static/src/img/home2-r1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+</template>
+<!-- End -->
+
+
+<!-- Slider with Banner -->
+<template id="home_slider02" name="Box Slider">
+  <section class="as-home-slider02">
+    <div class="container">
+      <div id="as_home_slider02" class="carousel slide s_banners_home_slider02" data-ride="carousel" data-interval="8000">
+          <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#as_home_slider02" data-slide-to="0" class="active"></li>
+          <li data-target="#as_home_slider02" data-slide-to="1"></li>
+          <li data-target="#as_home_slider02" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/theme_watch/static/src/img/home3-3.jpg" alt="" />
+            </div>
+
+            <div class="item">
+                <img src="/theme_watch/static/src/img/home3-2.jpg" alt="" />
+            </div>
+
+            <div class="item">
+              <img src="/theme_watch/static/src/img/home3-1.jpg" alt="" />                    
+            </div>
+        </div>
+
+        <a class="left carousel-control" data-target="#as_home_slider02" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-target="#as_home_slider02" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</template>
+<!-- End -->
+
+
+
+
+<template id="theme_four_column_add" name="Advertice Block">
+	<section class="as-4col-ads">
+		<div class="container">
+		<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="block-banner-item">
+					<a href="#"> 
+					<img src="/theme_watch/static/src/img/home1_banner2.jpg" alt=""/>
+					</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="block-banner-item">
+					<a href="#"> 
+					<img src="/theme_watch/static/src/img/home1_banner3.jpg" alt=""/>
+					</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="block-banner-item">
+					<a href="#"> 
+					<img src="/theme_watch/static/src/img/home1_banner4.jpg" alt=""/>
+					</a>
+					</div>
+				</div>
+		</div>
+			
+
+		</div>
+	</section>
+</template>
+
+<template id="theme_four_column_add1" name="Advertice Block V1">
+  <section class="as-4col-ads as-4col-ads-1">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="block-banner-item">
+            <a href="#"> 
+              <img src="/theme_watch/static/src/img/ads1.jpg" alt=""/>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 last">
+              <div class="block-banner-item">
+                <a href="#"> 
+                  <img src="/theme_watch/static/src/img/ads2.jpg" alt=""/>
+                </a>
+              </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 last">
+              <div class="block-banner-item">
+                <a href="#"> 
+                  <img src="/theme_watch/static/src/img/ads3.jpg" alt=""/>
+                </a>
+              </div>
+        </div>        
+    </div>
+      
+
+    </div>
+  </section>
+</template>
+
+
+
+<template id="policy_block" name="Our Policy">
+<section class="as-policy-section">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <div class="aps-policy">
+        <div class="icon"><i class="fa fa-anchor"></i></div>
+        <div class="policy-text">
+          <h3>Return &amp; Exchange</h3>
+          <p>Committed to return the money in 30 days </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="aps-policy">
+        <div class="icon"><i class="fa fa-gift"></i></div>
+        <div class="policy-text">
+          <h3>Receive Gift Card</h3>
+          <p>Receive gift all over order $50</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="aps-policy">
+        <div class="icon"><i class="fa fa-wifi"></i></div>
+        <div class="policy-text">
+          <h3>ONLINE SUPPORT 24/7</h3>
+          <p>24/7 online support is always ready </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</template>
+
+<!-- Testimonial -->
+<template id="testimonial_block" name="Testimonial">
+ <section class="as-testimonials"> 
+		 <div class="container">		
+            <div id="as-clients-slider" class="carousel s_client_slider slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#as-clients-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#as-clients-slider" data-slide-to="1"></li>
+                    <li data-target="#as-clients-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                    	<div class="info">
+                            <p class="client"><img src="/theme_watch/static/src/img/client1.png" titke="" alt="" /></p>
+                        </div>
+                        <div class="say">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>                       
+                        <div class="author">
+                        	<span class="author">Larissa</span>
+                            <span class="position">Owner</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                    	<div class="info">
+                            <p class="client"><img src="/theme_watch/static/src/img/client1.png" titke="" alt="" /></p>
+                        </div>
+                        <div class="say">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                        <div class="author">
+                        	<span class="author">Larissa</span>
+                            <span class="position">Owner</span>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                    	<div class="info">
+                            <p class="client"><img src="/theme_watch/static/src/img/client1.png" titke="" alt="" /></p>
+                        </div>
+                        <div class="say">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                        <div class="author">
+                        	<span class="author">Larissa</span>
+                            <span class="position">Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section> 
+</template>
+
+
+<!-- CMS Block -->
+<template id="as_cms_block" name="CMS Block">
+<section class="as-cms-block">
+
+  <div class="ascb-inner">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <a href="#"><img src="/theme_watch/static/src/img/banner14.jpg" alt="" /></a>  
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <a href="#"><img src="/theme_watch/static/src/img/banner15.jpg" alt="" /></a>  
+      </div>
+    </div>
+  </div>
+
+</section>
+</template>
+<!-- End -->
+
+<!-- collections-one  -->
+<template id="as_collections_one" name="Collections V1">
+<section class="as-collections-one">
+  <div class="as-collection-wrap">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="as-collection-inner as-ci-text">
+          <div class="text-content">            
+              <h2 class="p-name">Lorem Ipsum is simply dummy text</h2>
+              <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3>
+              <a class="btn btn-primary" href="#">Read More</a>          
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+          <div class="as-collection-inner as-ci-img">
+            <img class="img-responsive" src="/theme_watch/static/src/img/banner1.jpg" alt="" />
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- collections-one  -->
+<template id="as_collections_two" name="Collections V2">
+<section class="as-collections-two">
+   <div class="as-collection-wrap">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+          <div class="as-collection-inner as-ci-img">
+            <img class="img-responsive" src="/theme_watch/static/src/img/banner2.jpg" alt="" />
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="as-collection-inner as-ci-text">
+          <div class="text-content">            
+              <h2 class="p-name">Lorem Ipsum is simply dummy text</h2>
+              <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3>
+              <a class="btn btn-primary" href="#">Read More</a>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- as_aboutus1  -->
+<template id="as_aboutus1" name="Aboutus V1">
+<section class="as_aboutus1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="asas-img">
+            <img src="/theme_watch/static/src/img/About-us.jpg" alt="" />
+          </div>
+      </div>
+      <div class="col-md-8">
+        <div class="asas-text">
+          <h2 class="as-sub-head"><span>About us</span></h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div class="btn-col">
+            <a class="btn" href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- as_aboutus2  -->
+<template id="as_aboutus2" name="Aboutus V2">
+<section class="as_aboutus2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="asas-text">
+          <h2 class="as-sub-head"><span>About us</span></h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div class="btn-col">
+            <a class="btn" href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+          <div class="asas-img">
+            <img src="/theme_watch/static/src/img/About-us.jpg" alt="" />
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- as_aboutus2  -->
+<template id="as_aboutus3" name="Aboutus V3">
+<section class="as_aboutus3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <h2 class="as-sub-head"><span>About us</span></h2>
+          <div class="asas-img"><img src="/theme_watch/static/src/img/About-us-large.jpg" alt="" /></div>
+      </div>
+      <div class="col-md-12">
+        <div class="asas-text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div class="btn-col">
+            <a class="btn" href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- Latest Blog 2  -->
+<template id="as_latest_blog1" name="Latest Blog V1">
+<section class="as-latest-blog1">
+  <div class="container">
+    <div class="seaction-head">
+      <h1 class="o_default_snippet_text">Latest Blog</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section-post">
+            
+
+            <div class="section-post-media">
+              <div class="section-post-time">
+                <span>  25</span>
+                <small> Jun</small>
+              </div>
+                <a href="#" title="">
+                    <img src="/theme_watch/static/src/img/blog1.png" alt="" />
+                </a>
+            </div>
+
+            <div class="section-post-body">
+                <h4 class="section-post-title"><a href="#">It is a long established fact</a></h4>
+                <p class="section-post-excerpt">Etiam vitae ipsum magna. Etiam vitae ipsum magna.  Etiam vitae ipsum magna. Aliquam a elit quis orci tincidunt...</p>
+                <a href="#" title="" class="read-more">Read more</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-post">
+            <div class="section-post-media">
+                <div class="section-post-time">
+                  <span>  25</span>
+                  <small> Jun</small>
+                </div>
+                <a href="#" title="">
+                    <img src="/theme_watch/static/src/img/blog2.png" alt="" />
+                </a>
+            </div>
+
+            <div class="section-post-body">
+                <h4 class="section-post-title"><a href="#">It is a long established fact</a></h4>
+                <p class="section-post-excerpt">Etiam vitae ipsum magna. Etiam vitae ipsum magna.  Etiam vitae ipsum magna. Aliquam a elit quis orci tincidunt...</p>
+                <a href="#" title="" class="read-more">Read more</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section-post">
+            <div class="section-post-body">
+                <h4 class="section-post-title"><a href="#">It is a long established fact</a></h4>
+                <p class="section-post-excerpt">Etiam vitae ipsum magna. Etiam vitae ipsum magna.  Etiam vitae ipsum magna. Aliquam a elit quis orci tincidunt...</p>
+                <a href="#" title="" class="read-more">Read more</a>
+            </div>
+            <div class="section-post-media">
+              <div class="section-post-time">
+                <span>  25</span>
+                <small> Jun</small>
+              </div>
+                <a href="#" title="">
+                    <img src="/theme_watch/static/src/img/blog3.png" alt="" />
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-post">
+            <div class="section-post-body">
+                <h4 class="section-post-title"><a href="#">It is a long established fact</a></h4>
+                <p class="section-post-excerpt">Etiam vitae ipsum magna. Etiam vitae ipsum magna.  Etiam vitae ipsum magna. Aliquam a elit quis orci tincidunt...</p>
+                <a href="#" title="" class="read-more">Read more</a>
+            </div>
+            <div class="section-post-media">
+                <div class="section-post-time">
+                  <span>  25</span>
+                  <small> Jun</small>
+                </div>
+                <a href="#" title="">
+                    <img src="/theme_watch/static/src/img/1448427977.jpg" alt="" />
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- Banner  -->
+<template id="as_banner1" name="Banner">
+<section class="as-banner1">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="text">
+          <h2>Levitating Lamp by Levitron</h2>
+          <h3>PAY NOW AND GET <span>25%</span> DISCOUNT</h3>
+          <div class="btn-block">
+            <a class="btn btn-primary">Click here</a>
+          </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/asbanner.jpg" alt="" />
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- Our Services  -->
+<template id="as_offer_services" name="We offer Services">
+<section class="as-offer-services">
+  <div class="container">
+    <div class="seaction-head">
+      <h1>We offer Services</h1>
+    </div>
+    <div class="seaction-head-desc">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="icon">
+            <i class="fa fa-shopping-cart" />
+          </div>
+          <div class="service-inner">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+            <div class="btn-block"><a href="#">Read More</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="icon">
+            <i class="fa fa-shopping-cart" />
+          </div>
+          <div class="service-inner">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+            <div class="btn-block"><a href="#">Read More</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="icon">
+            <i class="fa fa-shopping-cart" />
+          </div>
+          <div class="service-inner">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+            <div class="btn-block"><a href="#">Read More</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- Our Services  -->
+<template id="as_offer_services1" name="We offer Services V1">
+<section class="as-offer-services1">
+  <div class="container">
+    <div class="seaction-head">
+      <h1>We offer Services</h1>
+    </div>
+    <div class="seaction-head-desc">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="service-box sb-left">
+            <div class="icon">
+              <i class="fa fa-shopping-cart" />
+            </div>
+            <div class="service-inner">
+              <h2>Lorem ipsum dolor</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+              <div class="btn-block"><a href="#">Read More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="service-box sb-right">
+            <div class="icon">
+              <i class="fa fa-shopping-cart" />
+            </div>
+            <div class="service-inner">
+              <h2>Lorem ipsum dolor</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+              <div class="btn-block"><a href="#">Read More</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="service-box sb-left">
+            <div class="icon">
+              <i class="fa fa-shopping-cart" />
+            </div>
+            <div class="service-inner">
+              <h2>Lorem ipsum dolor</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+              <div class="btn-block"><a href="#">Read More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="service-box sb-right">
+            <div class="icon">
+              <i class="fa fa-shopping-cart" />
+            </div>
+            <div class="service-inner">
+              <h2>Lorem ipsum dolor</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+              <div class="btn-block"><a href="#">Read More</a></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+
+
+<!-- Our Team  -->
+<template id="as_our_team" name="Our Team">
+<section class="as-our-team">
+  <div class="container">
+    <div class="seaction-head"><h1>Our Team</h1></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team1.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team2.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team3.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team4.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+<!-- Our Team  -->
+<template id="as_our_team1" name="Our Team V1">
+<section class="as-our-team1">
+  <div class="container">
+    <div class="seaction-head"><h1>Our Team</h1></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team1.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team2.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team3.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="asot-inner">
+          <div class="team-img">
+            <img src="/theme_watch/static/src/img/team4.png" alt="" />
+          </div>
+          <div class="team-info">
+            <h2>Isla</h2>
+            <span>CEO</span>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--End -->
+
+
+
+<!-- Our Team  -->
+<template id="as_slider_std" name="SLider with Content">
+<section class="as-slider-std">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="seaction-head"><h1>Why Choose us</h1></div>
+        <div class="desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div id="carousel-example-generic" class="carousel slide s_banners_as_slider_std" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="/theme_watch/static/src/img/Choose2.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="/theme_watch/static/src/img/Choose1.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="/theme_watch/static/src/img/Choose3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</template>
+<template id="news_letter_popup_content" name="Newsletter Popup Content">
+    <section class="newsletter-popup-area">
+        <h2>Join Our Mailing List </h2>
+        <p>Pellentesque de fermentum mollis comodous an loremous</p>
+        <h3>Sign Up for exclusive updates, new arrivals and insider-only discounts</h3>
+        <div class="f-social">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </section>
+</template>
+<!--End -->
+
+
+
+<!-- Tabs start -->
+<template id="custom_tabs_1" name="Tab Style 1">
+<section class="custom-tabs-1">
+		<div class="container">
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+	    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+	    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
+	    <div role="tabpanel" class="tab-pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+	    <div role="tabpanel" class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  </div>
+	    <div role="tabpanel" class="tab-pane" id="settings">  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	  </div>
+	</div>
+</section>
+</template>
+<!-- Tabs End -->
+
+<template id="accordion_option1" name="Accordion option 1">
+<!--accordion  -->
+<!--<section class="accordion-option1">
+  <div class="container">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse">
+              Collapsible Group Item #1
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+   <section class="accordion-option1">
+        <div class="container">
+            <div class="panel-group" role="tablist" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" data-toggle="collapse">
+                        <h4 class="panel-title">
+                            Collapsible Group Item #1
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" data-toggle="collapse">
+                        <h4 class="panel-title">
+                            Collapsible Group Item #2
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" data-toggle="collapse">
+                        <h4 class="panel-title">
+                            Collapsible Group Item #3
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End -->
+</template>
+
+<!-- as-parallax-1 -->
+<template id="as_parallax" name="Parallax">
+<section class="as-parallax-1" style="background-image: url(/theme_watch/static/src/img/as-parallax.jpg)">
+
+  <div class="container">
+      <h4>Available, get it now online!</h4>
+      <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <div class="aspb-link">
+        <a href="#">Read More..</a>
+      </div>
+  </div>
+
+</section>
+</template>
+<!--  -->
+
+<!-- stats-section -->
+ <template id="as_stats_section" name="Stats Counter">
+<section class="as-stats-section">
+
+  <div class="container">
+     <div class="row">
+       <div class="col-md-3">
+          <div class="stats-box">
+            <label class="stats-icon">
+              <i class="fa fa-picture-o" />
+            </label>
+            <span class="counter-s"><span class="counter counter-portfolio">500</span>+</span>
+            <p class="stats-label">Portfolio Layouts </p>
+         </div>
+       </div>
+
+       <div class="col-md-3">
+          <div class="stats-box">
+            <label class="stats-icon">
+              <i class="fa fa-pencil" />
+            </label>
+            <span class="counter-s"><span class="counter counter-blog-template">1000</span>+</span>
+            <p class="stats-label">Blog Templates</p>
+         </div>
+       </div>
+
+       <div class="col-md-3">
+          <div class="stats-box">
+            <label class="stats-icon">
+              <i class="fa fa-puzzle-piece" />
+            </label>
+            <span class="counter-s"><span class="counter counter-shortcut">500</span>+</span>
+            <p class="stats-label">Shortcodes</p>
+         </div>
+       </div>
+       <div class="col-md-3">
+          <div class="stats-box">
+            <label class="stats-icon">
+              <i class="fa fa-file-text-o" />
+            </label>
+            <span class="counter-s"><span class="counter counter-like">2000</span>+</span>
+            <p class="stats-label">Likes</p>
+         </div>
+       </div>
+     </div>
+  </div>
+
+</section>
+</template> 
+<!--  -->
+
+<!-- Content Feature 1-->
+<template id="as_content_feature" name="Content Feature">
+<section class="as-content-feature-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="as-card">
+          <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="as-card">
+        <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="as-card">
+          <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="as-card">
+          <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="as-card">
+          <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="as-card">
+          <div class="i-con"><i class="fa fa-cog" /></div>
+          <div class="asc-text">
+              <h3>Full Less Support</h3>
+              <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</template>
+<!-- -->
+
+<!-- text3col-section -->
+<template id="text3col_section" name="Text with BG">
+	<section class="text3col-section">
+	  <div class="row">
+	    <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col1.jpg)">
+	      <div class="text3col-col-in">
+	        <h2>Title Here</h2>
+	        <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+	        <div class="text3col-link">
+	          <a href="#">Read More..</a>
+	        </div>
+	      </div>
+	    </section>
+	    <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col2.jpg)">
+	      <div class="text3col-col-in">
+	        <h2>Title Here</h2>
+	        <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+	        <div class="text3col-link">
+	          <a href="#">Read More..</a>
+	        </div>
+	      </div>
+	    </section>
+	    <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col3.jpg)">
+	      <div class="text3col-col-in">
+	        <h2>Title Here</h2>
+	        <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+	        <div class="text3col-link">
+	          <a href="#">Read More..</a>
+	        </div>
+	      </div>
+	    </section>
+	  </div>
+	</section>
+</template>
+<!--  -->
+
+<!-- as-percent-button -->
+<template id="as_percent_button" name="Percent Button">
+<section class="as-percent-button">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Available, get it now online!</h4>
+      <p>Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>  
+    </div>
+    <div class="col-md-4">
+      <div class="aspb-link">
+        <a href="#">Read More..</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+</template>
+<!--  -->
+
+
+<!-- Prive table 1 -->
+<template id="as_price_table1" name="Prive Table 5 col">
+<section class="as-price-table as-price-table1">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Standard</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">19</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>5 Projects</li>
+              <li>5 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-2 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Premium</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">29</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>10 Projects</li>
+              <li>15 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-4 price-col standout">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Professional</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">39</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>15 Projects</li>
+              <li>30 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-2 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Maximum</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">49</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>30 Projects</li>
+              <li>100 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-2 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Extreme</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">49</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>Unlimited Projects</li>
+              <li>Unlimited Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+</template>
+<!-- End -->
+
+<!-- Prive table 2 -->
+<template id="as_price_table2" name="Prive Table 4 col">
+<section class="as-price-table as-price-table2">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Standard</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">19</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>5 Projects</li>
+              <li>5 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-3 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Premium</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">29</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>10 Projects</li>
+              <li>15 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-3 price-col standout">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Professional</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">39</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>15 Projects</li>
+              <li>30 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-3 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Maximum</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">49</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>30 Projects</li>
+              <li>100 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!--  -->
+
+<!-- Prive table 3 -->
+<template id="as_price_table3" name="Prive Table 3 col">
+<section class="as-price-table as-price-table3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Premium</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">29</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>10 Projects</li>
+              <li>15 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-4 price-col standout">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Professional</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">39</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>15 Projects</li>
+              <li>30 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-4 price-col">
+        <div class="price-col-inner">
+
+          <div class="pci-label">
+            <h3>Maximum</h3>
+          </div>
+
+          <div class="pci-price-row">
+            <div class="price price-with-decimal">
+              <span class="currency">$</span>
+              <span class="integer-part">49</span>
+              <sup class="decimal-part">99</sup>
+              <span class="time">monthly</span>
+            </div>
+          </div>
+
+          <div class="pci-price-list">
+            <ul>
+              <li>30 Projects</li>
+              <li>100 GB Storage</li>
+              <li>Unlimited Users</li>
+            </ul>
+          </div>
+
+          <div class="pci-price-fot">
+            <a href="#">Sing Up</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+<!-- & -->
+
+<!-- Progress Bar -->
+<template id="progress_bar" name="Progress Bar">
+  <section class="progress-bar-theme">
+    <div class="container">
+      <div class="seaction-head">
+        <h1>Progress Bar</h1>
+      </div>
+    <section class="progress">
+      <div class="progress-bar progress-bar-gray" role="progressbar" data-animate-width="80%">
+        <span class="object-non-visible" data-effect-delay="200">HTML5</span>
+      </div>
+    </section>
+    <section class="progress">
+      <div class="progress-bar progress-bar-gray" role="progressbar" data-animate-width="90%">
+        <span class="object-non-visible" data-effect-delay="200">CSS3</span>
+      </div>
+    </section>
+    <section class="progress">
+      <div class="progress-bar progress-bar-gray" role="progressbar" data-animate-width="75%">
+        <span class="object-non-visible" data-effect-delay="200">JQUERY</span>
+      </div>
+    </section>
+  </div>
+  </section>
+</template>
+<!-- & -->
+
+<!-- Gallery  -->
+<template name="Gallery Image" id="theme_slider_image">
+  <section class="as-gallery-img">
+    <div class="container">
+      <div class="seaction-head"><h1>Portfolio Item</h1></div>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery1.jpg" alt=""  class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery1.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery2.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery2.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery3.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery3.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery4.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery4.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery5.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery5.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery6.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery6.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery7.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery7.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 asgi-col">
+          <div class="img">
+            <img src="/theme_watch/static/src/img/gallery8.jpg" alt="" class="theme-slider-gallary"/>
+            <a href="/theme_watch/static/src/img/gallery8.jpg" class="slider-popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+<!-- & -->
+
+<!-- Header With Description -->
+<template id="as_desc_head" name="Tilte With Description">
+  <section class="as-desc-head">
+    <div class="container">
+    <h2>The New Way to success</h2>
+    <div class="asdh-desc">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+  </div>
+  </section>
+</template>
+<!-- & -->
+
+<!-- Time Line -->
+<template id="as_left_img" name="Left Image">
+  <section class="as-left-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="asl-img">
+            <img src="/theme_watch/static/src/img/feature-img.png" alt="" title="" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <h2 class="section-title">  Start getting more</h2>
+          <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas harum, hic officiis commodi reprehenderit explicabo tenetur eos! Excepturi adipisci consequatur quisquam error, velit, pariatur</p>
+
+          <div class="aslg-icon">
+            <section>
+              <div class="licon"><i class="fa fa-rss"></i></div>
+              <div class="idesc">
+                <h3>Bootstrap 3x</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas harum, hic officiis commodi</p>
+              </div>
+            </section>
+            <section>
+              <div class="licon"><i class="fa fa-credit-card"></i></div>
+              <div class="idesc">
+                <h3>Bootstrap 3x</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas harum, hic officiis commodi</p>
+              </div>
+            </section>
+            <section>
+              <div class="licon"><i class="fa fa-cogs"></i></div>
+              <div class="idesc">
+                <h3>Bootstrap 3x</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas harum, hic officiis commodi</p>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+<!-- & -->
+
+
+<template id="add_snippets" inherit_id="website.snippets" name="Add Custom snippet">
+  <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+  <t t-snippet="theme_watch.as_price_table3"
+       t-thumbnail="/theme_watch/static/src/icon/as_price_table3.png"/>
+  <t t-snippet="theme_watch.as_price_table2"
+       t-thumbnail="/theme_watch/static/src/icon/as_price_table2.png"/>	
+  <t t-snippet="theme_watch.as_price_table1"
+       t-thumbnail="/theme_watch/static/src/icon/as_price_table1.png"/>
+  <t t-snippet="theme_watch.as_percent_button"
+       t-thumbnail="/theme_watch/static/src/icon/as_percent_button.png"/>
+  <t t-snippet="theme_watch.text3col_section"
+       t-thumbnail="/theme_watch/static/src/icon/text3col_section.png"/>
+  <t t-snippet="theme_watch.as_content_feature"
+       t-thumbnail="/theme_watch/static/src/icon/as_content_feature.png"/>
+  <t t-snippet="theme_watch.as_stats_section"
+       t-thumbnail="/theme_watch/static/src/icon/as_stats_section.png"/>
+  <t t-snippet="theme_watch.as_parallax"
+       t-thumbnail="/theme_watch/static/src/icon/as-parallax-1.png"/> 
+  <t t-snippet="theme_watch.custom_tabs_1"
+       t-thumbnail="/theme_watch/static/src/icon/custom-tabs-1.png"/>
+  <t t-snippet="theme_watch.accordion_option1"
+       t-thumbnail="/theme_watch/static/src/icon/accordion_option1.png"/>
+  <t t-snippet="theme_watch.animated_slider"
+       t-thumbnail="/theme_watch/static/src/icon/animation-slide.png"/>
+
+  <t t-snippet="theme_watch.home_slider01"
+       t-thumbnail="/theme_watch/static/src/icon/home_slider01.png"/>
+  <t t-snippet="theme_watch.home_slider02"
+       t-thumbnail="/theme_watch/static/src/icon/home_slider02.png"/>
+
+  <t t-snippet="theme_watch.policy_block"
+       t-thumbnail="/theme_watch/static/src/icon/policy.png"/>
+  <t t-snippet="theme_watch.news_letter_popup_content"
+       t-thumbnail="/theme_watch/static/src/icon/news_letter_popup_content.png"/>     
+    <t t-snippet="theme_watch.testimonial_block"
+       t-thumbnail="/theme_watch/static/src/icon/testimonial.png"/>
+    <t t-snippet="theme_watch.latest_blog"
+       t-thumbnail="/theme_watch/static/src/icon/blogs.png"/>
+    <t t-snippet="theme_watch.as_cms_block"
+       t-thumbnail="/theme_watch/static/src/icon/ads-two.png"/>
+    <t t-snippet="theme_watch.as_collections_one"
+       t-thumbnail="/theme_watch/static/src/icon/ads-right.png"/>
+    <t t-snippet="theme_watch.as_collections_two"
+       t-thumbnail="/theme_watch/static/src/icon/ads-left.png"/>
+    <t t-snippet="theme_watch.as_aboutus1"
+       t-thumbnail="/theme_watch/static/src/icon/about-left.jpg"/>
+    <t t-snippet="theme_watch.as_aboutus2"
+       t-thumbnail="/theme_watch/static/src/icon/about-right.jpg"/>
+    <t t-snippet="theme_watch.as_aboutus3"
+       t-thumbnail="/theme_watch/static/src/icon/about-top.jpg"/>
+    <t t-snippet="theme_watch.as_latest_blog1"
+       t-thumbnail="/theme_watch/static/src/icon/bolg-1.jpg"/>
+    <t t-snippet="theme_watch.as_banner1"
+       t-thumbnail="/theme_watch/static/src/icon/banner.jpg"/>
+    <t t-snippet="theme_watch.as_offer_services"
+       t-thumbnail="/theme_watch/static/src/icon/services.jpg"/>
+    <t t-snippet="theme_watch.as_offer_services1"
+       t-thumbnail="/theme_watch/static/src/icon/services1.jpg"/>
+    <t t-snippet="theme_watch.as_our_team"
+       t-thumbnail="/theme_watch/static/src/icon/our-team.jpg"/>
+    <t t-snippet="theme_watch.as_our_team1"
+       t-thumbnail="/theme_watch/static/src/icon/our-team.jpg"/>
+    <t t-snippet="theme_watch.as_slider_std"
+       t-thumbnail="/theme_watch/static/src/icon/slider-with-content.jpg"/>
+  <t t-snippet="theme_watch.theme_slider_image"
+       t-thumbnail="/theme_watch/static/src/icon/theme_slider_image.png"/>
+  <t t-snippet="theme_watch.progress_bar"
+       t-thumbnail="/theme_watch/static/src/icon/progress_bar.png"/>
+
+  <t t-snippet="theme_watch.as_desc_head"
+       t-thumbnail="/theme_watch/static/src/icon/as-desc-head.png"/>
+  
+  <t t-snippet="theme_watch.as_left_img"
+       t-thumbnail="/theme_watch/static/src/icon/as_left_img.png"/>
+       
+  </xpath>
+  <xpath expr="//div[@id='snippet_feature']//div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_watch.theme_four_column_add"
+       t-thumbnail="/theme_watch/static/src/icon/ads11.jpg"/>
+    <t t-snippet="theme_watch.theme_four_column_add1"
+       t-thumbnail="/theme_watch/static/src/icon/ads.jpg"/>
+  </xpath>
+  <xpath expr="//div[@id='snippet_effect']//div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_watch.theme_slider"
+       t-thumbnail="/theme_watch/static/src/icon/main_slider.png"/> 
+  </xpath>
+</template>
+
+  <template id="options_tabs" inherit_id="website.snippets" name="Customize Options">
+    <xpath expr="//div[@id='snippet_options']" position="inside">
+        <div data-js='tabslide'
+            data-selector=".custom-tabs-1">
+            <li data-add_tab=""><a>Add Tab</a></li>
+            <li data-remove_tab=""><a>Remove Tab</a></li>
+        </div>
+    </xpath>
+  </template>
+  <template id="options_progress" inherit_id="website.snippets" name="Customize Options">
+    <xpath expr="//div[@id='snippet_options']" position="inside">
+        <div data-js='theme_progressbar'
+            data-selector=".progress-bar-theme .progress .progress-bar">
+            <li data-change_progress=""><a>Change Progress</a></li>
+        </div>
+    <div data-js='collapse1'
+         data-selector='.panel-group > .panel:has(> .panel-collapse)'
+         data-drop-in='.panel-group:has(> .panel > .panel-collapse)'>
+    </div>
+    </xpath>
+  </template>
+
+</odoo>

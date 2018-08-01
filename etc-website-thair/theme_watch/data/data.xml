@@ -1,0 +1,361 @@
+<?xml version="1.0" ?>
+<openerp>
+   <data noupdate="0">
+        <!--<record id="email_template_share_wishlist" model="mail.template">
+            <field name="name">Share Product Wishlist - Send by Email</field>
+            <field name="email_from">admin@example.com</field>
+            <field name="subject">Take a look at ${object.user_id.partner_id.name} wishlist</field>
+            <field name="email_to">${object.email_address}</field>
+            <field name="model_id" ref="model_product_share_wishlist"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.user_id and object.user_id.partner_id.lang}</field>
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+   <p>Hey,</p>  
+   <p>Take a look at my wishlist from ${object.website_id.name}.</p>
+   <p>Message from ${object.user_id.partner_id.name}:</p>
+   <p> ${object.comment} </p>
+   <p> Product Grid</p>
+   <div>
+   <table style="border=0;width=50%%">
+   <tr>
+	   <th> Product Name</th>
+	   <th> Link </th>
+	   <th> Price </th>
+   </tr>
+   % for line in object.get_wishlist_detailst():
+	   <tr>
+	      <td> ${line.product_id.name}</td>
+	      <td> ${object.get_product_url(line.product_id)}</td>
+	      <td> ${line.product_id.lst_price}</td>
+	   </tr>
+   % endfor
+   </div>
+   <br/>
+   <br/>
+   <p> Thank you,</p>
+   <p>${object.user_id.partner_id.name}</p> 
+   </div>
+                ]]>
+                </field>
+        </record>-->
+        
+</data>
+<data>
+        <!--<record model="ir.cron" id="share_wishlist_cron">
+            <field name="name">Share Wishlist Sheduler</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'product.share.wishlist'"/>
+            <field name="function" eval="'share_wislist'"/>
+            <field name="args" eval="'()'" />
+        </record>-->
+</data>
+    <data noupdate="1">
+
+       <record id="product.categ_1" model="product.public.category">
+          <field name="name">Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+       <record id="product.categ_2" model="product.public.category">
+          <field name="parent_id" ref="product.categ_1"/>
+          <field name="name">Pump Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+       <record id="product.categ_3" model="product.public.category">
+          <field name="parent_id" ref="product.categ_2"/>
+          <field name="name">Long Nose Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+       <record id="product.categ_4" model="product.public.category">
+          <field name="parent_id" ref="product.categ_2"/>
+          <field name="name">Cutting Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+       <record id="product.categ_5" model="product.public.category">
+          <field name="parent_id" ref="product.categ_2"/>
+          <field name="name">Electronics Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+         <record id="product.categ_6" model="product.public.category">
+          <field name="parent_id" ref="product.categ_2"/>
+          <field name="name">Insulated Pliers</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+          <record id="product.categ_32" model="product.public.category">
+          <field name="name">Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_33" model="product.public.category">
+          <field name="parent_id" ref="product.categ_32"/>
+          <field name="name">Ball-Peen Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_34" model="product.public.category">
+          <field name="parent_id" ref="product.categ_33"/>
+          <field name="name">Masonry Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_35" model="product.public.category">
+          <field name="parent_id" ref="product.categ_33"/>
+          <field name="name">Mallet Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_36" model="product.public.category">
+          <field name="parent_id" ref="product.categ_33"/>
+          <field name="name">Framing Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_37" model="product.public.category">
+          <field name="parent_id" ref="product.categ_33"/>
+          <field name="name">Sledge Hammer</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+        <record id="product.categ_44" model="product.public.category">
+          <field name="name">Drill Machines</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>                                                                             
+            <record id="product.categ_45" model="product.public.category">
+          <field name="parent_id" ref="product.categ_44"/>
+          <field name="name">Handheld Drill Macines</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+            <record id="product.categ_46" model="product.public.category">
+          <field name="parent_id" ref="product.categ_44"/>
+          <field name="name">Bench Drill Machines</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+        <record id="product.categ_49" model="product.public.category">
+          <field name="name">Air Tools</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record> 
+          <record id="product.categ_50" model="product.public.category">
+          <field name="name">Measuring</field>
+          <field name="sequence">8</field>
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>                                                                                 
+        <record id="product_product_example_1" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">50.0</field>
+            <field name="list_price">60.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+
+          <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>            
+        </record>
+        <record id="product_product_example_2" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">210.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+
+        </record>
+        <record id="product_product_example_3" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">10.0</field>
+            <field name="list_price">10.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_3" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_4" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_5" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_6" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_7" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_8" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_9" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_10" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_11" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_12" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_13" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_14" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_15" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_16" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>                                 
+        <record id="product_product_example_17" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_18" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_19" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_20" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+                <record id="product_product_example_21" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_22" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_23" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+        <record id="product_product_example_24" model="product.product">
+            <field name="name">Example Product</field>
+            <field name="standard_price">110.0</field>
+            <field name="list_price">170.0</field>
+            <field name="type">consu</field>
+            <field name="description_sale">Example Product</field>
+            <field name="image" type="base64" file="product/static/img/product_product_2-image.jpg"/>
+        </record>
+
+
+    </data>
+</openerp>
+

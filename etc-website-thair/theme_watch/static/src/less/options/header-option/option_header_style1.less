@@ -1,0 +1,119 @@
+header {
+	.header-top{
+		.ht-left{
+			@media(max-width: 767px){
+				display: none;
+			}
+		}
+	}
+
+	.header-middle {
+		.logo {
+			padding: 20px 0;
+		}
+		.hm-search{
+			float: right;
+			width: 42%;
+			padding: 0 70px 0 0;
+			@media(max-width: 767px){
+				float:left;
+				padding: 0;
+				width: 55%;
+			}
+			.hm-search-box{
+				margin: 25px 0;
+				@media(max-width: 767px){
+					margin:0 0 10px;
+				}
+				.form-control{
+					height: 40px;
+					line-height: 40px;
+					font-size: 14px;
+					border-width: 1px;
+				}
+				.btn{
+					width: 40px;
+					height: 40px;	
+				}
+			}
+		}
+		.hm-cart{
+			margin: 25px 0;
+			position: absolute; 
+			right: 15px; 
+			top: 0px;
+			width: auto;
+			height: auto;
+			line-height: normal;
+			@media(max-width: 767px){
+				margin:0 0 10px;
+				position: relative;
+				right: 0;
+			}
+			ul {
+				li.hm-cart-item{
+					padding: 0;
+					border: none;
+					 > span {
+					 	font-size: 0px;
+					 	line-height: normal;
+					 	.my_cart_quantity{
+					 		width: 30px;
+					 		height: 30px;
+					 		line-height: 24px;
+					 		border-radius: 50%;
+					 		font-size: 12px;
+					 		text-align: center;
+					 		background: darken(@as-theme, 10%);
+					 		color: @as-light;
+					 		border:2px solid @as-light;
+					 		position: absolute;
+					 		right: 0;
+					 		top: -10px;
+					 		padding: 0;
+
+					 	}
+					 	i{
+						 	font-size: 40px;
+						 	color: @as-theme;
+					 	}	
+					 }
+					 
+				}
+			}
+		}
+	}
+	.navbar-default {
+		> .container{
+			background: transparent;
+			@media(max-width: 991px){
+				bottom: 30px;
+				.navbar-header{
+					.navbar-toggle{
+						padding: 13px;
+						border-radius: 0;
+					}
+				}
+			}
+			@media(max-width: 767px){
+				bottom: 17px;
+			}
+
+			.navbar-collapse{
+				@media(max-width: 1200px){
+					width:970px;
+					max-width: 100%;
+				}
+				.navbar-nav{
+					background: @as-theme;
+					border-bottom: 5px solid darken(@as-theme, 10%);
+
+				}
+			}
+		}
+	}
+}
+
+
+
+.fixed-header header .navbar-default > .container { background: @as-theme; }

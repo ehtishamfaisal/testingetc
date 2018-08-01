@@ -1,0 +1,23 @@
+
+from odoo import models, fields, api
+
+class ProductTemplate(models.Model):
+    _inherit = 'product.template'
+
+    wk_type = fields.Selection([('dt','DINING TABLES'),('dts','DINING TABLES SETS'),('kt','Kitchen Tables'),('ot','Occasional Tables'),('b','Benches'),('kts','Kitchen Table Sets')], default='kt', string="Website Type(Product)")
+#Dimensions
+    height = fields.Char('Height(cm)')
+    length = fields.Char('Length(cm)')
+    widtht = fields.Char('Width(cm)')
+    additional_dimensions = fields.Char('Additional Dimensions(cm)')
+    packing_dimensions = fields.Char('Packing Dimensions')
+    # sizes = fields.Selection([('2ft','2ft'),('3ft','3ft'),('4ft','4ft'),('5ft','5ft'),('6ft','6ft')], default='3ft', string="Sizes")
+    sizes = fields.Char(string="Sizes")
+
+#Additional Information
+    weight = fields.Float('Weight(Kg)')
+    material = fields.Char('Material')
+    finish = fields.Char('Finish')
+    assembly = fields.Char('Assembly')
+    caring_instructions = fields.Char('Caring Instructions')
+    special_features = fields.Char('Special Features')

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Assets, less, js -->
+
+  <template id="assent_front" inherit_id="website.assets_frontend">
+    <xpath expr="." position="inside">
+		<link href="/theme_watch/static/src/css/owl.carousel.css" rel="stylesheet"/>
+		<link href="/theme_watch/static/src/css/font-awesome.min.css" rel="stylesheet"/>
+		<link href="/theme_watch/static/src/less/as_variables.less" rel="stylesheet" type="text/less"/>
+		<link href="/theme_watch/static/src/less/as_header.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_base.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_buttons.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_mixins.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_custom.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_footer.less" rel="stylesheet" type="text/less"/>			
+		<link href="/theme_watch/static/src/less/as_ie.less" rel="stylesheet" type="text/less"/>
+	<link href="/theme_watch/static/src/less/as_products.less" rel="stylesheet" type="text/less"/>												
+      	<link rel='stylesheet' href="/theme_watch/static/src/css/magnific-popup.css"/>
+		<script type="text/javascript"  src="/theme_watch/static/src/js/owl.carousel.min.js"></script> 
+    	<script type="text/javascript"  src="/theme_watch/static/src/js/html5shiv.min.js"></script> 
+    	<script type="text/javascript"  src="/theme_watch/static/src/js/respond.min.js"></script> 
+      	<link rel='stylesheet' href="/theme_watch/static/src/css/website.product.sorting.css"/>
+
+       <script type="text/javascript"  src="/theme_watch/static/src/js/clean_shopping_cart.js"></script>							
+	    <script type="text/javascript"  src="/theme_watch/static/src/js/jquery.elevatezoom.js"></script>
+	    <script type="text/javascript"  src="/theme_watch/static/src/js/lib/waypoints.min.js"></script>  	 
+	    <script type="text/javascript"  src="/theme_watch/static/src/js/lib/jquery.counterup.min.js"></script>
+		<script type="text/javascript"  src="/theme_watch/static/src/js/lib/jquery.magnific-popup.min.js"></script>
+    	<script type="text/javascript"  src="/theme_watch/static/src/js/custom.js"></script>  
+	   <script type="text/javascript"  src="/theme_watch/static/src/js/zoom.js"></script>
+<script type="text/javascript" src="/theme_watch/static/src/js/website_product_wishlist.js"></script>	   	 
+    </xpath>
+</template>
+<!--<template id="wishlist_js" inherit_id="website.layout">
+<xpath expr="//body" position="inside">
+        <script type="text/javascript" src="/theme_watch/static/src/js/website_product_wishlist.js"></script>
+</xpath>
+</template>-->
+
+
+</odoo>

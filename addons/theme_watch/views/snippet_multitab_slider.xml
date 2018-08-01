@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<!-- Snippet's Body -->
+		<template id="s_product_multi_with_header" inherit_id="website.snippets" name="Multi Tab Product Slider">
+    <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+    	<div>
+            <div class="oe_snippet_thumbnail">
+                <img class="oe_snippet_thumbnail_img" src="/theme_watch/static/src/icon/slider-collection.jpg"/>
+                <span class="oe_snippet_thumbnail_title">Slider Collection</span>
+            </div>
+            <section class="oe_snippet_body js_multi_collection">
+            <div class="container">
+                    <div class="product_slide" contentEditable="false">
+	                	<div class="seaction-head">
+	                    	<h1>Product Slider</h1>
+						</div>
+                </div>
+            </div>
+            </section>
+    	</div>
+	</xpath>
+	    <xpath expr="//div[@id='snippet_options']" position="inside">
+        <div data-js='s_product_multi_with_header'
+            data-selector=".js_multi_collection">
+            <li data-select_collection=""><a>Change Slider</a></li>
+        </div>
+    </xpath>
+	</template>			
+		<template id="theme_watch.s_collection_configure" name="Collection coursol">
+			<div class="container" t-if="obj">
+			<div class="product_slide" contentEditable="false">
+				<div class="seaction-head">
+    				<h1 t-field="obj.name"/>
+				</div>
+            </div>
+			<div class="multi_tab_slider">	
+			<t t-if="obj and obj.tab_collection_ids">
+        	<div class="pd-more-info">
+        		<ul class="nav nav-tabs" role="tablist">
+					<t t-foreach="obj.tab_collection_ids" t-as="collection">
+                	<li role="presentation" t-att-class="'active' if obj.tab_collection_ids[0].id==collection.id else ''">
+                		<a t-att-href="'#more_info_%s' %(collection.id)" aria-controls="more_info" role="tab" data-toggle="tab">
+<t t-esc="collection.name"/></a>
+            		</li>
+            	</t>
+            	</ul>                
+            	<div class="tab-content">
+            		<t t-foreach="obj.tab_collection_ids" t-as="collection">
+                    <div role="tabpanel"  t-att-class="'tab-pane active' if obj.tab_collection_ids[0].id==collection.id else 'tab-pane'" t-att-id="'more_info_%s' %(collection.id)">
+                    	<!-- <span class="tab_title" t-field="collection.name">
+                    	</span> -->
+                    	<t t-if="collection.product_ids">
+                    		<div class="owl-carousel thumbnails-slides multi_slider">
+
+                    			<t t-foreach="collection.product_ids" t-as="product">
+                    				<div class="item"><t t-call="theme_watch.snippet_products_item"/>
+                    			</div>
+                    			</t>
+                    		</div>
+                    	</t>
+                    </div>
+                	</t>
+                </div>
+            </div>
+            </t>
+        </div>
+		</div>
+		</template>
+
+		<template id="theme_watch.snippet_products_item" name="Products item">
+			<form action="/shop/cart/update" method="post" class="as-product">
+				<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+				<div itemscope="itemscope" itemtype="http://schema.org/Product" class="asp-inner">
+					<div class="pro-img oe_product_image">
+						<a class="preview-image" itemprop="url"
+							t-att-href="'/shop/product/%s' % slug(product)">
+							<span class="product-img" itemprop="image" t-field="product.image"
+								t-field-options='{"widget": "image"}'
+								t-att-alt="product.name" />
+						</a>
+					</div>
+					<t t-if="show_publish">
+						<div id="website_published_button" class=""
+							groups="base.group_sale_manager">
+							<t t-call="website.publish_management">
+								<t t-set="object" t-value="product" />
+								<t t-set="publish_edit" t-value="True" />
+								<t t-set="action" t-value="'product.product_template_action'" />
+							</t>
+						</div>
+					</t>
+					<div class="pro-info">
+						<h3>
+							<strong>
+								<a itemprop="name"
+									t-att-href="'/shop/product/%s' % slug(product)"
+									t-field="product.name" />
+							</strong>
+						</h3>
+ <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">
+		                    <b>
+		                        <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+		                            <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+		                        </t>
+
+		                        <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+		                        <span itemprop="price" style="display:none;" t-esc="product.website_price" />
+		                        <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+		                    </b>
+		                </div>
+					
+                    <div class="pro-action">
+    					<input name="product_id" t-att-value="product.product_variant_id.id" type="hidden"/>
+                        <button class="button btn-cart"><span>Add to Cart</span> <i class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+				</div>
+			</form>
+		</template>
+
+	<template id="s_product_multi_snippet" inherit_id="website.snippets" name="Multi Tab Product Slider">
+	<xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+		<div>
+            <div class="oe_snippet_thumbnail">
+                <img class="oe_snippet_thumbnail_img" src="/theme_watch/static/src/icon/multitab_product_collection.jpg"/>
+                <span class="oe_snippet_thumbnail_title">Multitab Product Collection</span>
+            </div>
+            <section class="oe_snippet_body multi_tab_product_snippet">
+            <div class="container">
+                <div class="product_slide" contentEditable="false">
+    				<div class="seaction-head">
+        			 <h1>Multitab Product Collection</h1>
+    				</div>
+                </div>
+            </div>
+            </section>
+    	</div>
+	</xpath>
+	<xpath expr="//div[@id='snippet_options']" position="inside">
+        <div data-js='s_product_multi_snippet'
+            data-selector=".multi_tab_product_snippet">
+            <li data-select_collection=""><a>Modify</a></li>
+        </div>
+    </xpath>
+	</template>	
+		<template id="theme_watch.product_tab_content" name="Collection coursol">
+			<div class="container multi_product" t-if="product_obj">
+				<div class="product_slide" contentEditable="false" t-if="product_obj">
+    				<div class="seaction-head">
+        			    <h1 t-field="product_obj.name"/>
+    				</div>
+                </div>
+                <div class="product_tab_content" t-if="product_obj.tab_collection_ids">
+                    <div class="row">
+        			<t t-foreach="product_obj.tab_collection_ids" t-as="collection">
+        				<t t-set="len_p" t-value="len(product_obj.tab_collection_ids)"/>
+        			<div t-attf-class=" product_detail #{len_p==1 and 'col-md-12' or ''} #{len_p==2 and 'col-md-6' or ''} #{len_p==3 and 'col-md-4' or ''} #{len_p>=4 and 'col-md-3' or ''}">
+        				<h2 class="filter_title" t-field="collection.name"/>
+        				<div class="filter_value" t-if="collection.product_ids">
+        					    <t t-set="max_qty" t-value="0"/>
+								<t t-foreach="collection.product_ids" t-as="product">
+									<t t-if="max_qty&lt;=5">
+                    				<div class="item"><t t-call="theme_watch.snippet_products_item"/>
+                    				<t t-set="max_qty" t-value="max_qty+1"/>
+                    			</div>
+                    		</t>
+                    		   </t>
+        				</div>
+        				</div>
+        			</t>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+<template id="aseets_frontend_multi_slider" inherit_id="website.assets_frontend">
+	<xpath expr="." position="inside">
+		<script type="text/javascript"  src="/theme_watch/static/src/js/website_multi_front.js"></script> 
+	</xpath>
+</template>
+<template id="assets_editor_multi_slider" inherit_id="website.assets_editor" name="Editor assets">
+      <xpath expr="." position="inside">
+          <script type="text/javascript" src="/theme_watch/static/src/js/website_multi_editor.js"></script>       
+      </xpath>
+  </template>
+</odoo>

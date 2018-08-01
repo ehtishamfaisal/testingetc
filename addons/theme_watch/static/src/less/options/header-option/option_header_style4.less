@@ -1,0 +1,249 @@
+header {
+
+	.header-top{
+		background: transparent;
+		border:none;
+		.ht-left{
+			@media(max-width: 767px){
+				display: none;
+			}
+			li{
+				color: @as-light;
+				a{
+					color: @as-light;	
+				}
+			}
+		}
+		.price-list {
+			.dropdown {
+				.dropdown-toggle{
+					background: transparent;
+					color: @as-light;
+					border-top: none !important;
+				}
+			}
+		}
+		.ht-links{
+			> li {
+				a{
+					border: none;
+					color: @as-light;
+					&:hover{
+						background:darken(@as-theme, 10%);
+						border: none;
+					}
+				}
+			}
+		}
+		.hed-drop{
+			ul {
+				> li{
+					border: none !important;
+					label{
+						color: @as-light;
+					}
+					&:hover{
+						label{
+
+						}
+					}
+				}	
+			}
+			
+		}
+	}
+
+	.header-middle {
+		.logo {
+			padding: 20px 0;
+			@media(max-width: 991px){
+				padding: 15px 0;
+			}
+		}
+		.hm-search{
+			float: right;
+			width: 42%;
+			padding: 0 70px 0 0;
+			@media(max-width: 767px){
+				float:left;
+				padding: 0;
+				width: 55%;
+			}
+			.hm-search-box{
+				margin: 20px 0;
+				@media(max-width: 991px){
+					margin: 22px 0 0;
+				}
+				@media(max-width: 767px){
+					margin:0 0 10px;
+				}
+				.form-control{
+					height: 40px;
+					line-height: 40px;
+					font-size: 14px;
+					background: fade(@as-light, 15%);
+					border: none;
+					box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+					text-transform: none;
+					color: @as-light;
+				}
+				.btn{
+					width: 40px;
+					height: 40px;
+					background: transparent;
+				}
+			}
+		}
+		.hm-cart{
+			margin: 20px 0;
+			position: absolute; 
+			right: 15px; 
+			top: 0px;
+			width: auto;
+			height: auto;
+			line-height: normal;
+			@media(max-width: 767px){
+				margin:0 0 10px;
+				position: relative;
+				right: 0;
+			}
+			ul {
+				li.hm-cart-item{
+					padding: 0;
+					border: none;
+					 > span {
+					 	font-size: 0px;
+					 	line-height: normal;
+					 	.my_cart_quantity{
+					 		width: 30px;
+					 		height: 30px;
+					 		line-height: 26px;
+					 		border-radius: 50%;
+					 		font-size: 12px;
+					 		text-align: center;
+					 		background: @as-light;
+					 		color: @as-theme;
+					 		border:2px solid @as-theme;
+					 		position: absolute;
+					 		right: 0;
+					 		top: -10px;
+					 		padding: 0;
+
+					 	}
+					 	i{
+						 	font-size: 40px;
+						 	color: fade(@as-light, 90%);
+					 	}	
+					 }
+					 
+				}
+			}
+		}
+	}
+	.navbar-default {
+		background: @as-theme;
+		padding: 0 0 15px;
+		> .container{
+			background: transparent;
+			@media(max-width: 991px){
+				bottom: 28px;
+				.navbar-header{
+					.navbar-toggle{
+						padding: 13px;
+						border-radius: 0;
+						background: fade(@as-light, 27%);
+						box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+			@media(max-width: 767px){
+				bottom: 25px;
+			}
+
+			.navbar-collapse{
+				@media(max-width: 1200px){
+					width:970px;
+					max-width: 100%;
+				}
+				.navbar-nav{
+					background: @as-light;
+					box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+					> li{
+						> a{
+							color: @as-dark;
+							border: none;
+							&:hover{
+								background: darken(@as-light, 7%);
+								@media(max-width: 991px){
+									background:darken(@as-dark, 10%);
+								}
+							}
+						}
+						&:hover,
+						&:focus,
+						&:active{
+							> a{
+								border: none;
+								background: darken(@as-light, 7%);
+								@media(max-width: 991px){
+									background:darken(@as-dark, 10%);
+								}	
+								&:hover,
+								&:focus,
+								&:active{
+									background: darken(@as-light, 7%);	
+									border: none;
+									@media(max-width: 991px){
+									background:darken(@as-dark, 10%);
+								}
+								}
+							}
+						}
+						&.active{
+							> a{
+								background: darken(@as-light, 7%);
+								border: none;
+								@media(max-width: 991px){
+									background: darken(@as-theme, 10%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+header .header-middle .hm-search .hm-search-box .form-control::-webkit-input-placeholder {
+   color: @as-light;
+}
+
+header .header-middle .hm-search .hm-search-box .form-control:-moz-placeholder {
+   color: @as-light;
+}
+
+header .header-middle .hm-search .hm-search-box .form-control::-moz-placeholder { 
+   color: @as-light;
+}
+
+header .header-middle .hm-search .hm-search-box .form-control:-ms-input-placeholder {  
+   color: @as-light;
+}
+
+
+.fixed-header {
+	header {
+		.navbar-default {
+			> .container{
+				background: @as-light;
+				.navbar-collapse{
+					.navbar-nav{
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}

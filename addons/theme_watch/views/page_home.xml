@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template name="Home page" id="website.homepage" page="True">
+  <t t-call="website.layout">
+    <div id="wrap" class="oe_structure oe_empty">
+      <section class="as-animated-slider">
+        <div style="min-height: 440px;" id="main-slider" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"/>
+            <li data-target="#main-slider" data-slide-to="1"/>
+            <li data-target="#main-slider" data-slide-to="2"/>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active" style="background-image: url(/theme_watch/static/src/img/bg1.jpg)">
+              <div class="container">
+                <blockquote class="carousel-content">
+                  <h2 class="animation animated-item-2 o_default_snippet_text"> A crown for every achievement </h2>
+                  <h1 class="animation animated-item-1 o_default_snippet_text">rolex</h1>
+                  <a class="btn-slide animation animated-item-3 o_default_snippet_text" href="#">Shope Now</a>
+                </blockquote>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(/theme_watch/static/src/img/bg2.jpg)">
+              <div class="container">
+                <blockquote class="carousel-content">
+                  <h2 class="animation animated-item-2 o_default_snippet_text">What's your style!</h2>
+                  <h1 class="animation animated-item-1 o_default_snippet_text">titan</h1>
+                  <a class="btn-slide animation animated-item-3 o_default_snippet_text" href="#">Shope Now</a>
+                </blockquote>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(/theme_watch/static/src/img/bg3.jpg)">
+              <div class="container">
+                <blockquote class="carousel-content">
+                  <h2 class="animation animated-item-2 o_default_snippet_text">What's your style!</h2>
+                  <h1 class="animation animated-item-1 o_default_snippet_text">Fastrack</h1>
+                  <a class="btn-slide animation animated-item-3 o_default_snippet_text" href="#">Shope Now</a>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" data-target="#main-slider" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"/>
+            <span class="sr-only o_default_snippet_text">Previous</span>
+          </a>
+          <a class="right carousel-control" data-target="#main-slider" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"/>
+            <span class="sr-only o_default_snippet_text">Next</span>
+          </a>
+        </div>
+      </section>
+      <section class="as-4col-ads">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="block-banner-item">
+                <a href="#">
+                  <img src="/theme_watch/static/src/img/home1_banner2.jpg" alt=""/>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="block-banner-item">
+                <a href="#">
+                  <img src="/theme_watch/static/src/img/home1_banner3.jpg" alt=""/>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="block-banner-item">
+                <a href="#">
+                  <img src="/theme_watch/static/src/img/home1_banner4.jpg" alt=""/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text3col-section">
+        <div class="row">
+          <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col1.jpg)">
+            <div class="text3col-col-in">
+              <h2 class="o_default_snippet_text">Title Here</h2>
+              <p class="o_default_snippet_text">Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+              <div class="text3col-link">
+                <a class="o_default_snippet_text" href="#">Read More..</a>
+              </div>
+            </div>
+          </section>
+          <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col2.jpg)">
+            <div class="text3col-col-in">
+              <h2 class="o_default_snippet_text">Title Here</h2>
+              <p class="o_default_snippet_text">Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+              <div class="text3col-link">
+                <a class="o_default_snippet_text" href="#">Read More..</a>
+              </div>
+            </div>
+          </section>
+          <section class="col-md-4 text3col-col" style="background-image: url(/theme_watch/static/src/img/text3col3.jpg)">
+            <div class="text3col-col-in">
+              <h2 class="o_default_snippet_text">Title Here</h2>
+              <p class="o_default_snippet_text">Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+              <div class="text3col-link">
+                <a class="o_default_snippet_text" href="#">Read More..</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="as-cms-block">
+        <div class="ascb-inner">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <a href="#">
+                <img src="/theme_watch/static/src/img/banner14.jpg" alt=""/>
+              </a>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <a href="#">
+                <img src="/theme_watch/static/src/img/banner15.jpg" alt=""/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="as-parallax-1" style="background-image: url(/theme_watch/static/src/img/as-parallax.jpg)">
+        <div class="container">
+          <h4 class="o_default_snippet_text">Available, get it now online!</h4>
+          <p class="o_default_snippet_text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+          <div class="aspb-link">
+            <a class="o_default_snippet_text" href="#">Read More..</a>
+          </div>
+        </div>
+      </section>
+      <section class="as-testimonials">
+        <div class="container">
+          <div id="myCarousel1473266447429" class="carousel s_client_slider slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel1473266447429" data-slide-to="0" class="active"/>
+              <li data-target="#myCarousel1473266447429" data-slide-to="1"/>
+              <li data-target="#myCarousel1473266447429" data-slide-to="2"/>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="info">
+                  <p class="client">
+                    <img src="/theme_watch/static/src/img/client1.png" titke="" alt=""/>
+                  </p>
+                </div>
+                <div class="say">
+                  <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="author">
+                  <span class="author o_default_snippet_text">Larissa</span>
+                  <span class="position o_default_snippet_text">Owner</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p class="client">
+                    <img src="/theme_watch/static/src/img/client1.png" titke="" alt=""/>
+                  </p>
+                </div>
+                <div class="say">
+                  <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="author">
+                  <span class="author o_default_snippet_text">Larissa</span>
+                  <span class="position o_default_snippet_text">Owner</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p class="client">
+                    <img src="/theme_watch/static/src/img/client1.png" titke="" alt=""/>
+                  </p>
+                </div>
+                <div class="say">
+                  <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="author">
+                  <span class="author o_default_snippet_text">Larissa</span>
+                  <span class="position o_default_snippet_text">Owner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="as-percent-button">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h4 class="o_default_snippet_text">Available, get it now online!</h4>
+              <p class="o_default_snippet_text">Lorem ipsum dolor consetuer adipicing sed diam ticidut erat votpat dolore</p>
+            </div>
+            <div class="col-md-4">
+              <div class="aspb-link">
+                <a class="o_default_snippet_text" href="#">Read More..</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </t>
+</template>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_config_settings_bread_cum" model="ir.ui.view">
+        <field name="name">Website config breadcrumb setting</field>
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website.view_website_config_settings"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[4]" position="after">
+                <group string="Breadcrumb Configuration">
+					<field name="bread_cum_image" widget="image" class="oe_avatar oe_left"/>
+					<field name="is_breadcum" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

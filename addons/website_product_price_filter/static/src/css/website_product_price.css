@@ -1,0 +1,32 @@
+/* Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) */
+/* See LICENSE file for full copyright and licensing details. */
+/*.wk_horizontal_cart ul {
+	margin-right: 10px;
+	width: 80px;
+	background-color: red;
+	position: relative;
+	top:100%;
+
+
+}*/
+.wk_horizontal_cart{
+background-color: pink;
+position: relative;
+	top:50px;
+	z-index: absolute;
+
+}
+.horizontal_category{
+	padding:6px 12px;
+}
+
+.products_price_filter{
+	height: 150px;
+}
+#products_grid_before .js_attributes .nav-stacked div{
+	text-transform: capitalize !important;
+}
+.navbar-nav-filter > li > span {
+	font-size: 12px;
+	font-weight: initial;
+}

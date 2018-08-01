@@ -1,0 +1,198 @@
+header {
+	position: relative;
+	box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.7);
+	.header-top{
+		box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.7);
+		.ht-left{
+			@media(max-width: 767px){
+				display: none;
+			}
+		}
+	}
+
+	.header-middle {
+		.logo {
+			padding: 20px 0;
+			float: right;
+			width: 66.66%;
+			padding-right: 33.33%;
+			text-align: center;
+			@media(max-width: 767px){
+				width:100%;
+				padding-right: 0;
+				float: left;
+				text-align:center;
+			}
+		}
+		.hm-search{
+			float: left;
+			width: 33.33%;
+			padding: 0;
+			@media(max-width: 767px){
+				float: left;
+				padding: 0;
+				width: auto;
+				padding-right:0;
+				.hm-search-hide{
+					display: block;
+					width: 40px;
+					height: 40px;	
+					line-height: 40px;
+					text-align: center;
+					border-radius: 50%;
+					left: 0;
+					right: auto;
+					background: @as-theme;
+					color: @as-light;
+					margin-bottom: 10px;
+				}
+
+			}
+			.hm-search-box{
+				margin: 25px 0;
+				@media(max-width: 767px){
+					display:none;
+					position: absolute;
+					bottom: -60px;
+					margin: 0px;
+					background: @as-light;
+					padding: 10px;
+					border-radius: 0px 0px 5px 5px;
+					left: 0;
+					right: 0;
+				}
+				.form-control{
+					height: 40px;
+					line-height: 40px;
+					font-size: 14px;
+					padding-left: 50px;
+					border: none;
+					box-shadow: none;
+					text-transform: none;
+					background: none;
+					border-radius: 25px;
+					width: 200px;
+					max-width: 100%;
+					border: 1px solid transparent;
+					&:focus{
+						border: 1px solid darken(@as-light, 10%);
+					}
+					@media(max-width: 767px){
+						padding-right: 45px;
+						padding-left: 10px;
+						border: 1px solid darken(@as-light, 10%);
+						border-radius: 18px;
+						width: 100%;
+					}
+				}
+				.btn{
+					width: 40px;
+					height: 40px;	
+					border-radius: 50%;
+					left: 0;
+					right: auto;
+					@media(max-width: 767px){
+						left: auto;
+						right: 10px;
+						top: 10px;
+					}
+				}
+			}
+		}
+		.hm-cart{
+			margin: 28px 0;
+			position: absolute; 
+			right: 15px; 
+			top: 0px;
+			width: auto;
+			height: auto;
+			line-height: normal;
+			@media(max-width: 991px){
+				right:85px;
+			}
+			@media(max-width: 767px){
+				margin: 2px 0 0;
+				position: relative;
+				right: auto;
+				padding: 0;
+				top: auto;
+				margin-right: 60px;
+			}
+			ul {
+				li.hm-cart-item{
+					padding: 0;
+					border: none;
+					 > span {
+					 	line-height: normal;
+					 	.my_cart_quantity{
+
+					 	}
+					 	i{
+						 	font-size: 20px;
+							color: @as-light;
+							border-radius: 50%;
+							background: @as-theme;
+							height: 35px;
+							width: 35px;
+							text-align: center;
+							line-height: 35px;
+							margin-left: 10px;
+							vertical-align: middle;
+					 	}	
+					 }
+					 
+				}
+			}
+		}
+		@media(max-width: 991px){
+			padding-right:0;
+		}
+	}
+	.navbar-default {
+		> .container{
+			.navbar-collapse {
+				.navbar-nav{
+					text-align: center;
+				}
+			}
+			
+			@media(max-width: 991px){
+				bottom: 25px;
+				.navbar-header{
+					.navbar-toggle{
+						padding: 13px;
+						border-radius: 0;
+					}
+				}
+			}
+			@media(max-width: 767px){
+				bottom: 10px;
+			}
+
+			.navbar-collapse{
+				@media(max-width: 1200px){
+					width:970px;
+					max-width: 100%;
+				}
+				.navbar-nav{
+
+				}
+			}
+		}
+	}
+}
+
+
+
+.hm-search-open{
+	header .header-middle .hm-search .hm-search-hide{
+		.fa-search{
+			&:before{
+				content: "\f00d";
+			}
+		}
+	}
+	header .header-middle .hm-search .hm-search-box{
+		display: block;
+	}
+}

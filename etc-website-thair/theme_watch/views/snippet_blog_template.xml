@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="assets_editor_blog" inherit_id="website.assets_editor" name="Editor assets">
+      <xpath expr="//script[last()]" position="after">
+          <script type="text/javascript" src="/theme_watch/static/src/js/website.editor.blog.js"></script>       
+      </xpath>
+  </template>
+  
+  <template id="assent_front_blog" inherit_id="website.assets_frontend">
+    <xpath expr="." position="inside">
+     	<script type="text/javascript"  src="/theme_watch/static/src/js/website.front.blog.js"></script>          
+    </xpath>
+</template>
+<template name="Latest BLog" id="latest_blog">
+    <section class="as-latest-blog web_blog_slider" data-blog-id="0" contentEditable="false">
+			<div class="seaction-head">
+					  <h1>Latest Blog</h1>
+			</div>
+    </section>
+</template>
+<template id="blog_indicators">
+	<t t-if="blog_slide&lt;as_latest_blog_slide">
+       <li t-att-data-target="'#as-latest_blog-%s' %(blog_slider.id)" t-attf-data-slide-to="#{int(blog_slide)}" t-att-class="'active' if blog_slide==0 else ''"></li>
+	</t>
+	<t t-set="blog_slide" t-value="blog_slide+1"/>
+  <t t-if="blog_slide&lt;as_latest_blog_slide">
+	 <t t-call="theme_watch.blog_indicators"/>
+  </t>
+</template>
+<template id="theme_watch.blog_slider_items">
+	<div t-attf-class="item #{'active' if no_blog==len(blog_slider.blog_ids.ids) else ''}">
+		<div class="row">
+			<div class="col-md-6 col-sm-6" t-if="(no_blog-1)&gt;-1">
+				<t t-set="blog" t-value="blog_slider.blog_ids[no_blog-1]"/>
+				<t t-set="blog_cover_property" t-value="json.loads(blog.cover_properties)"/>
+				<div class="section-post">
+          <a t-attf-href="/blog/#{slug(blog.blog_id)}/post/#{slug(blog)}" title="">
+					  <div class="section-post-media" t-attf-style="background-image: #{blog_cover_property.get('background-image', 'none')}">                                                       
+            </div>
+            </a>
+            <div class="section-post-body">
+                <div class="section-post-time">
+                    <span t-field="blog.write_date"/>
+                </div>
+                <h4 class="section-post-title">
+                <a href="#" t-field="blog.name"></a>
+                </h4>
+                <p class="section-post-excerpt" t-field="blog.subtitle"></p>
+                <a t-attf-href="/blog/#{slug(blog.blog_id)}/post/#{slug(blog)}" title="" class="read-more">Read more</a>
+            </div>				
+        </div></div>
+	    <t t-set="no_blog" t-value="no_blog-1"/>
+				<t t-set="blog" t-value="blog_slider.blog_ids[no_blog-1]"/>
+			<t t-set="blog_cover_property" t-value="json.loads(blog.cover_properties)"/>
+      <div class="col-md-6 col-sm-6" t-if="(no_blog-1)&gt;-1">
+				<div class="section-post">
+          <a t-attf-href="/blog/#{slug(blog.blog_id)}/post/#{slug(blog)}" title="">
+            <div class="section-post-media" t-attf-style="background-image: #{blog_cover_property.get('background-image', 'none')}">                                                       
+            </div>
+            </a>
+
+
+                            <div class="section-post-body">
+                                <div class="section-post-time">
+                                    <span t-field="blog.write_date"/>
+                                </div>
+
+                                <h4 class="section-post-title">
+                <a href="#" t-field="blog.name"></a>
+              </h4>
+
+                                <p class="section-post-excerpt" t-field="blog.subtitle"></p>
+
+                                <a t-attf-href="/blog/#{slug(blog.blog_id)}/post/#{slug(blog)}" title="" class="read-more">Read more</a>
+                            </div>					
+</div></div></div>
+			<t t-set="no_blog" t-value="no_blog-1"/>
+	</div>
+     <t t-if="no_blog-1&gt;-1">
+	 <t t-call="theme_watch.blog_slider_items"/>
+	 </t>
+</template>
+
+<template id="blog_slider_content">
+  <div class="container" t-if="blog_slider">
+  	<div class="seaction-head">
+  		<t t-if="blog_slider.name">
+  			<h1 t-field="blog_slider.name"/>  			
+  		</t>
+       </div>
+  		  <t t-set="no_blog" t-value="0.0"/>
+  		  <t t-if="blog_slider.blog_ids">
+  		  <t t-set="no_blog" t-value="len(blog_slider.blog_ids.ids)"/>
+  		  </t>
+		  <t t-set="as_latest_blog_slide" t-value="float(no_blog)/float(2)"/>
+		  <t t-if="float(no_blog)/float(2)-int(no_blog/2)!=0">
+		    <t t-set="as_latest_blog_slide" t-value="int(no_blog/2)+1"/>
+		  </t>   
+		  <t t-set="as_latest_blog_slide" t-value="int(as_latest_blog_slide)"/>  		
+  		<div t-att-id="'as-latest_blog-%s' % (blog_slider.id)" class="carousel slide" data-ride="carousel" t-if="blog_slider.blog_ids">
+  				<t t-set="blog_slide" t-value="int(0)"/>
+  				<ol class="carousel-indicators">
+ 					    <t t-call="theme_watch.blog_indicators"/>			
+        	</ol>
+    
+  				<t t-set="blog_slide" t-value="0"/>       		
+        		<div class="carousel-inner" role="listbox">
+        			<t t-call="theme_watch.blog_slider_items"/>
+        		</div>
+  		</div>
+  	</div>
+
+  <div class="container" t-if="not blog_slider">
+		<div class="seaction-head">
+				  <h1>Latest Blog</h1>
+		</div> 
+		<div class="content">
+			No blog Found
+		</div>	
+  </div>
+</template>
+
+<template id="snippet_options_blog" inherit_id="website.snippet_options">
+    <xpath expr="." position="inside">
+        <div data-js='latest_blog'
+            data-selector=".web_blog_slider">
+            <li data-website_blog_configure="">
+                <a href="#">Modify</a>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+
+<template id="place_into_bar_blog" inherit_id="website.snippets" name="Place Snippet into bar">
+  <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+      <t t-snippet="theme_watch.latest_blog"
+       t-thumbnail="/theme_watch/static/src/icon/blogs.png"/>
+  </xpath>
+ </template>
+</odoo>

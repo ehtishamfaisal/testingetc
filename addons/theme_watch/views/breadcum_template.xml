@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="shop_page_bradcum">
+        <div class="container">
+            <h1>    
+                <span t-if="not (category and category.name)"><span>Shop</span></span>
+                <span t-if="category and category.name"><span t-esc="category.name"/></span>
+            </h1>
+            <ul class="breadcrumb">
+                <li><a href="/page/homepage">Home</a></li>
+                <li><a href="/shop/">Shop</a></li>
+					<t t-if="category">
+						<t t-if="website.get_category_breadcum(category)">
+							<t t-set="categ_bread" t-value="website.get_category_breadcum(category)" />
+							<t t-foreach="categ_bread" t-as="categ">
+								<li>
+									<a t-att-href="keep('/shop/category/%s' % slug(categ), category=0)"
+										t-field="categ.name" />
+								</li>
+							</t>
+						</t>
+					</t>
+            </ul>
+        </div>
+</template>
+<template id="breadcum_shop" inherit_id="website_sale.products" >
+        <xpath expr="//div[@id='wrap']//div[@class='oe_structure']" position="before">
+        <t t-if="not website.is_breadcum">
+        <t t-if="website.bread_cum_image">
+        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+         <t t-call="theme_watch.shop_page_bradcum" />  
+        </nav>
+          </t>
+        <t t-if="not website.bread_cum_image">
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		         <t t-call="theme_watch.shop_page_bradcum" />  
+		
+        </nav>
+        </t>  
+        </t>        
+        </xpath>
+</template>
+<template id="product_detail_page_bradcum" inherit_id="website_sale.product">
+<xpath expr="//section[@id='product_detail']" position="before">
+	    <t t-if="not website.is_breadcum">
+        <t t-if="not (website.bread_cum_image)">
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+	        <div class="container">
+	            <h1>    
+	                <span t-esc="product.name"/>
+	            </h1>
+	            <ul class="breadcrumb">
+	                <li><a href="/page/homepage">Home</a></li>
+	                <li><a href="/shop/"><span t-field="product.name"/></a></li>
+	            </ul>
+	    	</div>
+        </nav>
+        </t>
+        <t t-if="website.bread_cum_image">
+        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	                <div class="container">
+	                    <h1>    
+	                        <span t-esc="product.name"/>
+	                    </h1>
+	                    <ul class="breadcrumb">
+	                        <li><a href="/page/homepage">Home</a></li>
+	                        <li><a href="/shop/"><span t-field="product.name"/></a></li>
+	                    </ul>
+                	</div> 
+		
+        </nav>
+        </t>
+        </t>          	
+
+</xpath>
+<xpath expr="//ol[@class='breadcrumb']" position="attributes">
+<attribute name="t-if">website.is_breadcum</attribute>
+</xpath>
+</template>
+<template id="cart" inherit_id="website_sale.cart">
+        <xpath expr="//div[@class='container oe_website_sale']" position="before">
+         <t t-if="not website.is_breadcum">
+         <t t-if="website.bread_cum_image">
+        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+              <div class="container">
+                <h1><span>Shopping Cart</span></h1>
+                <ul class="breadcrumb">
+                    <li><a href="/page/homepage">Home</a></li>
+                    <li class="active"><span>Shopping Cart</span></li>
+                </ul>
+              </div>
+        </nav> 
+        </t>
+        <t t-if="not website.bread_cum_image">
+		<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+              <div class="container">
+                <h1><span>Shopping Cart</span></h1>
+                <ul class="breadcrumb">
+                    <li><a href="/page/homepage">Home</a></li>
+                    <li class="active"><span>Shopping Cart</span></li>
+                </ul>
+              </div>
+        </nav> 
+        </t> 
+        </t>            
+        </xpath>
+        <xpath expr="//div[@class='container oe_website_sale']/h1" position="attributes">
+            <attribute name="t-if">website.bread_cum_image</attribute>
+        </xpath>
+</template>
+	<template id="checkout" inherit_id="website_sale.checkout">
+	        <xpath expr="//div[@class='container oe_website_sale']" position="before">
+	        	<t t-if="not website.is_breadcum">
+		        <t t-if="not website.bread_cum_image">
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		              <div class="container">
+		                <h1><span>Checkout</span></h1>
+		                <ul class="breadcrumb">
+		                    <li><a href="/page/homepage">Home</a></li>  
+		                    <li class="active"><span>Checkout</span></li>
+		                </ul>
+		              </div>
+		        </nav> 
+		        </t>
+	         	<t t-if="website.bread_cum_image">
+		        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	              <div class="container">
+	                <h1><span>Checkout</span></h1>
+	                <ul class="breadcrumb">
+	                    <li><a href="/page/homepage">Home</a></li>  
+	                    <li class="active"><span>Checkout</span></li>
+	                </ul>
+	              </div>
+		        </nav> 
+	        </t>
+	        </t>        
+	        </xpath>
+        	<!--<xpath expr="//div[@class='container oe_website_sale']/h1" position="attributes">
+            	<attribute name="t-if">website.bread_cum_image</attribute>
+        	</xpath>-->	        
+	</template>
+		<template id="payment" inherit_id="website_sale.payment">
+	        <xpath expr="//div[@class='container oe_website_sale']" position="before">
+	        	<t t-if="not website.is_breadcum">
+		        <t t-if="not website.bread_cum_image">
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		              <div class="container">
+		                <h1><span>Payment</span></h1>
+		                <ul class="breadcrumb">
+		                    <li><a href="/page/homepage">Home</a></li>  
+		                    <li class="active"><span>Payment</span></li>
+		                </ul>
+		              </div>
+		        </nav> 
+		        </t>
+	         	<t t-if="website.bread_cum_image">
+		        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	              <div class="container">
+	                <h1><span>Payment</span></h1>
+	                <ul class="breadcrumb">
+	                    <li><a href="/page/homepage">Home</a></li>  
+	                    <li class="active"><span>Payment</span></li>
+	                </ul>
+	              </div>
+		        </nav> 
+	        </t>
+	        </t>        
+	        </xpath>
+        	<xpath expr="//div[@class='container oe_website_sale']/h1" position="attributes">
+            	<attribute name="t-if">website.is_breadcum</attribute>
+        	</xpath>
+	</template>
+	<template id="confirmation" inherit_id="website_sale.confirmation">
+	        <xpath expr="//div[@class='container oe_website_sale']" position="before">
+	        	<t t-if="not website.is_breadcum">
+		        <t t-if="not website.bread_cum_image">
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		              <div class="container">
+		                <h1><span>Confirmation</span></h1>
+		                <ul class="breadcrumb">
+		                    <li><a href="/page/homepage">Home</a></li>  
+		                    <li class="active"><span>Confirmation</span></li>
+		                </ul>
+		              </div>
+		        </nav> 
+		        </t>
+	         	<t t-if="website.bread_cum_image">
+		        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	              <div class="container">
+	                <h1><span>Confirmation</span></h1>
+	                <ul class="breadcrumb">
+	                    <li><a href="/page/homepage">Home</a></li>  
+	                    <li class="active"><span>Confirmation</span></li>
+	                </ul>
+	              </div>
+		        </nav> 
+	        </t> 
+	        </t>       
+	        </xpath>
+        	<xpath expr="//div[@class='container oe_website_sale']/h1" position="attributes">
+            	<attribute name="t-if">website.is_breadcum</attribute>
+        	</xpath>
+	</template>
+		<template id="wishlist_bradcum" inherit_id="theme_watch.wishlist">
+	        <xpath expr="//div[@class='container oe_website_sale']" position="before">
+	        	<t t-if="not website.is_breadcum">
+		        <t t-if="not website.bread_cum_image">
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		              <div class="container">
+		                <h1><span>Product Wishlist</span></h1>
+		                <ul class="breadcrumb">
+		                    <li><a href="/page/homepage">Home</a></li>  
+		                    <li class="active"><span>Product Wishlist</span></li>
+		                </ul>
+		              </div>
+		        </nav> 
+		        </t>
+	         	<t t-if="website.bread_cum_image">
+		        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	              <div class="container">
+	                <h1><span>Product Wishlist</span></h1>
+	                <ul class="breadcrumb">
+	                    <li><a href="/page/homepage">Home</a></li>  
+	                    <li class="active"><span>Product Wishlist</span></li>
+	                </ul>
+	              </div>
+		        </nav> 
+	        </t> 
+	        </t>       
+	        </xpath>
+        	<xpath expr="//div[@class='container oe_website_sale']/h1" position="attributes">
+            	<attribute name="t-if">website.is_breadcum</attribute>
+        	</xpath>
+	</template>
+	<template id="contact_us" inherit_id="website.contactus">
+        	<xpath expr="//div[@class='container']/h1" position="attributes">
+            	<attribute name="t-if">website.is_breadcum</attribute>
+        	</xpath>
+	        <xpath expr="//div[@class='oe_structure']" position="before">
+	        	<t t-if="not website.is_breadcum">
+		        <t t-if="not website.bread_cum_image">
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+		              <div class="container">
+		                <h1><span>Contact us</span></h1>
+		                <ul class="breadcrumb">
+		                    <li><a href="/page/homepage">Home</a></li>  
+		                    <li class="active"><span>Contact us</span></li>
+		                </ul>
+		              </div>
+		        </nav> 
+		        </t>
+	         	<t t-if="website.bread_cum_image">
+		        <t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+				<nav class="is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+	              <div class="container">
+	                <h1><span>Contact us</span></h1>
+	                <ul class="breadcrumb">
+	                    <li><a href="/page/homepage">Home</a></li>  
+	                    <li class="active"><span>Contact us</span></li>
+	                </ul>
+	              </div>
+		        </nav> 
+	        </t> 
+	        </t>       
+	        </xpath>
+	</template>
+
+<template id="website.page_404">
+    <t t-call="website.404">
+        <div class="container">
+            <div class="well mt32">
+                <p>This page does not exists, but you can create it as you are administrator of this site.</p>
+                <a class="btn btn-primary" t-attf-href="/website/add/#{ path }">Create Page</a>
+            </div>
+            <div class="text-center text-muted">Edit the content below this line to adapt the default "page not found" page.</div>
+        </div>
+        <hr/>
+    </t>
+</template>
+
+<template id="website.404">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <t t-raw="0"/>
+            <div class="oe_structure oe_empty">
+                <div class="container">
+				  <section class="page-404">
+				  <div class="hgroup">
+					<h1>Something Just Went Wrong !</h1>
+					<h2>404 Error</h2>
+				  </div>
+				  <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
+				  <p>Go <a href="javascript:history.go(-1)">Back</a> or <a href="/page/homepage">Home</a></p>
+				
+				 </section>
+                </div>
+            </div>
+
+            <t t-if="request.debug">
+                <t t-call="website.http_error_debug"/>
+            </t>
+        </div>
+    </t>
+</template>
+
+</odoo>

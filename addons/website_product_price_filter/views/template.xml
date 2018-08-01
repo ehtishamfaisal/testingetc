@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="assets_common" name="tour" inherit_id="web.assets_common">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/website_product_price_filter/static/src/js/web_tour.js"></script>
+		</xpath>
+	</template>
+	<template id="website_product_price_assets_frontend" inherit_id="website.assets_frontend">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/website_product_price_filter/static/src/js/website_product_price.js"></script>
+			<link rel='stylesheet' href='/website_product_price_filter/static/src/css/website_product_price.css'/>
+		</xpath>
+	</template>
+	<template id="products_attributes" inherit_id="website_sale.products_attributes" priority="100"  name="Product Price" active="True" customize_show="True">
+		<xpath expr="//form[@class='js_attributes']" position="inside">
+			<ul class="nav nav-pills nav-stacked mt16" t-if="price_rec">
+				<div class="affix-sidebar" id="mobile-view-categ">
+					<div class="sidebar-nav">
+						<div class="navbar navbar-default" role="navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" id="filter-bar" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-filter"/>
+								</button>
+								<span class="visible-xs navbar-brand">Products Filter</span>
+							</div>
+							<div class="navbar-collapse collapse sidebar-navbar-collapse">
+								<ul class="nav navbar-nav" id="sidenav01">
+									<li t-if="table_style" class="sub-slider-li">
+										<a data-toggle="collapse" data-target="#table_style" data-parent="#sidenav01" class="collapsed">
+										STYLE <span class="caret pull-right"/>
+										</a>
+										<div class="collapse" id="table_style" style="height: 0px;">
+											<ul class="nav nav-list navbar-nav-filter">
+												<t t-foreach="table_style" t-as="ts">
+													<li>
+														<input type="checkbox" name="att_table_style" t-att-value="'%s' % (ts.id)"  t-att-checked="'checked' if ts.id in set_table_style else False" t-attf-data-brand="#{ts.id}"/>
+														<span t-field="ts.name"/>
+													</li>
+												</t>
+											</ul>
+										</div>
+									</li>
+									<t t-foreach="attributes" t-as="a">
+										<t t-if="a.type != 'hidden' and a.name not in ['Style','Finish'] and a.type == 'color'">
+											<li t-if="a.value_ids and len(a.value_ids) &gt; 1" class="sub-slider-li">
+												<a data-toggle="collapse" data-target="#color-filter" data-parent="#sidenav01" class="collapsed" id="filter-li">
+													<t t-esc="a.name"/>
+													<span class="caret pull-right"/>
+												</a>
+												<div class="collapse" id="color-filter" style="height: 0px;">
+													<t t-if="a.type == 'color'">
+														<t t-foreach="a.value_ids" t-as="v">
+															<label t-attf-style="background-color:#{v.html_color or v.name}" t-attf-class="css_attribute_color #{'active' if v.id in attrib_set else ''}">
+															<input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else None" t-att-title="v.name"/>
+															</label>
+														</t>
+													</t>
+												</div>
+											</li>
+										</t>
+									</t>
+									<li t-if="leg_style" class="sub-slider-li">
+										<a data-toggle="collapse" data-target="#leg_style" data-parent="#sidenav01" class="collapsed">
+										LEG STYLE <span class="caret pull-right"/>
+										</a>
+										<div class="collapse" id="leg_style" style="height: 0px;">
+											<ul class="nav nav-list navbar-nav-filter">
+												<t t-foreach="leg_style" t-as="ls">
+													<li>
+														<input type="checkbox" name="att_leg_style" t-att-value="'%s' % (ls.id)"  t-att-checked="'checked' if ls.id in set_leg_style else False" t-attf-data-brand="#{ls.id}"/>
+														<span t-field="ls.name"/>
+													</li>
+												</t>
+											</ul>
+										</div>
+									</li>
+									<li t-if="price_rec" class="sub-slider-li">
+										<t t-set="filter_brand" t-value="str()"/>
+										<t t-foreach="brands or []" t-as="b">
+											<t t-set="filter_brand" t-value="filter_brand+str(b.id)"/>
+										</t>
+										<a data-toggle="collapse" data-target="#pricefilter" data-parent="#sidenav01" class="collapsed">
+										PRICE<span class="caret pull-right"/>
+										</a>
+										<div class="collapse" id="pricefilter" style="height: 0px;">
+											<ul class="nav nav-list navbar-nav-filter">
+												<t t-foreach="price_rec" t-as="b">
+													<li>
+														<input type="checkbox" name="attrib_price" t-att-value="'%s-%s' % (b.id,b.id)" t-att-checked="'checked' if b.id in price_set else False" t-attf-data-brand="#{b.id}"/>
+														<span t-field="b.name"/>
+													</li>
+												</t>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</xpath>
+	</template>
+</odoo>

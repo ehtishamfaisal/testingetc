@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_price_users,wk.product.price,model_wk_product_price,,1,0,0,0
+access_product_price_sale_manager,wk.product.price,model_wk_product_price,sales_team.group_sale_manager,1,1,1,1
+access_leg_style_users,leg.style,model_leg_style,,1,0,0,0
+access_leg_style_sale_manager,leg.style,model_leg_style,sales_team.group_sale_manager,1,1,1,1
+access_table_style_users,table.style,model_table_style,,1,0,0,0
+access_table_style_sale_manager,table.style,model_table_style,sales_team.group_sale_manager,1,1,1,1
+access_table_finish_users,table.finish,model_table_finish,,1,0,0,0
+access_table_finish_sale_manager,table.finish,model_table_finish,sales_team.group_sale_manager,1,1,1,1
+
+
+
+
+

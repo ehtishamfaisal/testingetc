@@ -1,0 +1,154 @@
+header {
+	.header-top{
+		border-bottom:1px solid darken(@as-light, 20%);
+		.ht-left{
+			@media(max-width: 767px){
+				display: none;
+			}
+		}
+	}
+
+	.header-middle {
+		.logo {
+			padding: 30px 0;
+		}
+		.hm-search{
+			float: right;
+			width: 42%;
+			padding: 0 70px 0 0;
+			@media(max-width: 767px){
+				float:left;
+				padding: 0;
+				width: 55%;
+			}
+			.hm-search-box{
+				margin: 35px 0;
+				@media(max-width: 767px){
+					margin:0 0 10px;
+				}
+				.form-control{
+					height: 40px;
+					line-height: 40px;
+					font-size: 14px;
+					border-width: 1px;
+					border-radius: 30px;
+				}
+				.btn{
+					width: 50px;
+					height: 40px;	
+					border-radius: 0px 30px 30px 0px;
+				}
+			}
+		}
+		.hm-cart{
+			margin: 35px 0;
+			position: absolute; 
+			right: 15px; 
+			top: 0px;
+			width: auto;
+			height: auto;
+			line-height: normal;
+			@media(max-width: 767px){
+				margin:0 0 10px;
+				position: relative;
+				right: 0;
+			}
+			ul {
+				li.hm-cart-item{
+					padding: 0;
+					border: none;
+					 > span {
+					 	font-size: 0px;
+					 	line-height: normal;
+					 	.my_cart_quantity{
+					 		width: 30px;
+					 		height: 30px;
+					 		line-height: 24px;
+					 		border-radius: 50%;
+					 		font-size: 12px;
+					 		text-align: center;
+					 		background: darken(@as-theme, 10%);
+					 		color: @as-light;
+					 		border:2px solid @as-light;
+					 		position: absolute;
+					 		right: 0;
+					 		top: -10px;
+					 		padding: 0;
+
+					 	}
+					 	i{
+						 	font-size: 40px;
+						 	color: @as-theme;
+					 	}	
+					 }
+					 
+				}
+			}
+		}
+	}
+	.navbar-default {
+		> .container{
+			background: @as-dark;
+			text-align: center;
+			@media(max-width: 991px){
+				bottom: 35px;
+				.navbar-header{
+					.navbar-toggle{
+						padding: 13px;
+						border-radius: 0;
+					}
+				}
+			}
+			@media(max-width: 767px){
+				bottom: 18px;
+			}
+
+			.navbar-collapse{
+				@media(max-width: 1200px){
+					width:970px;
+					max-width: 100%;
+				}
+				.navbar-nav{
+					background: @as-dark;
+					> li{
+						> a{
+							color: @as-light;
+							border: none;
+							padding: 10px 15px;
+							&:hover{
+								background: @as-theme;
+								color: @as-light;
+							}
+						}
+						&:hover,
+						&:focus,
+						&:active{
+							> a{
+								border: none;
+								background: @as-theme;
+								color: @as-light;
+								&:hover,
+								&:focus,
+								&:active{
+									background: @as-theme;
+									color: @as-light;
+									border: none;
+								}
+							}
+						}
+						&.active{
+							> a{
+								background: @as-theme;
+								color: @as-light;
+								border: none;
+								@media(max-width: 991px){
+									background: darken(@as-theme, 10%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

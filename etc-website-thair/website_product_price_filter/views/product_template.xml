@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="product_template_only_form_view_othre_info_extend">
+		<field name="name">product.template.product.form</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_only_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='type']" position="after">
+				<field name="sku_code"/>
+			</xpath>
+			<xpath expr="//page[@name='variants']" position="inside">
+				<group>
+					<group string="Leg Style">
+						<field name="leg_style_ids" widget="many2many_tags"/>
+					</group>
+					<group string="Table Style">
+						<field name="table_style_ids" widget="many2many_tags"/>
+					</group>
+				</group>
+			</xpath>
+		</field>
+	</record>
+	
+	<record model="ir.ui.view" id="sale_view_order_form_info_extend">
+		<field name="name">sale.order.form</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="after">
+				<field name="finish_id"/>
+			</xpath>
+		</field>
+	</record>
+	
+	
+</odoo>

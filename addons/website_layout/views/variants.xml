@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="products_attributes_extend" inherit_id="website_sale.products_attributes">
+		<xpath expr="//form/ul[@class='nav nav-pills nav-stacked mt16']" position="replace">
+		</xpath>
+	</template>
+	<template id="website_sale.variants">
+		<t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
+		<ul t-attf-class="list-unstyled js_add_cart_variants #{ul_class}" t-att-data-attribute_value_ids="attribute_value_ids">
+			<t t-foreach="product.attribute_line_ids.sorted(key=lambda x: x.attribute_id.sequence)" t-as="variant_id">
+				<li>
+					<strong t-field="variant_id.attribute_id.name"/>
+					<t t-if="variant_id.attribute_id.type == 'radio'">
+						<ul class="list-unstyled">
+							<t t-set="inc" t-value="0"/>
+							<t t-foreach="variant_id.value_ids" t-as="value_id">
+								<li class="form-group js_attribute_value" style="margin: 0;">
+									<label class="control-label" style="margin: 0 20px;">
+										<input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;"/>
+										<span t-field="value_id.name"/>
+										<span class="badge" t-if="value_id.price_extra">
+										<t t-esc="value_id.price_extra > 0 and '+' or ''"/>
+										<span t-field="value_id.price_extra" style="white-space: nowrap;" t-options='{
+											"widget": "monetary",
+											"from_currency": product.currency_id,
+											"display_currency": website.currency_id
+											}'/>
+										</span>
+									</label>
+								</li>
+								<t t-set="inc" t-value="inc+1"/>
+							</t>
+						</ul>
+					</t>
+					<t t-if="variant_id.attribute_id.type == 'color'">
+						<ul class="list-inline">
+							<t t-set="inc" t-value="0"/>
+							<li t-foreach="variant_id.value_ids" t-as="value_id">
+								<label t-attf-style="background-color:#{value_id.html_color or value_id.name}"
+									t-attf-class="css_attribute_color #{'active' if not inc else ''}">
+								<input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None"
+									t-att-checked="'checked' if not inc else None"
+									t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)"
+									t-att-value="value_id.id"
+									t-att-title="value_id.name"/>
+								</label>
+								<t t-set="inc" t-value="inc+1"/>
+							</li>
+						</ul>
+					</t>
+				</li>
+			</t>
+		</ul>
+	</template>
+	<template id="variants_custom">
+		<t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
+		<ul t-attf-class="list-unstyled js_add_cart_variants #{ul_class}" t-att-data-attribute_value_ids="attribute_value_ids">
+			<t t-foreach="product.attribute_line_ids.sorted(key=lambda x: x.attribute_id.sequence)" t-as="variant_id">
+				<li>
+					<strong t-field="variant_id.attribute_id.name"/>
+					<t t-if="variant_id.attribute_id.type in ['select', 'hidden']">
+						<select t-attf-class="form-control form-control-custom #{'js_variant_change' if variant_id.attribute_id.create_variant else ''}" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" required="required">
+							<option value=""></option>
+							<t t-foreach="variant_id.value_ids" t-as="value_id">
+								<option t-att-value="value_id.id">
+									<span t-field="value_id.name"/>
+									<span t-if="value_id.price_extra">
+									<t t-esc="value_id.price_extra > 0 and '+' or ''"/>
+									<span t-field="value_id.price_extra" style="white-space: nowrap;" t-options='{
+										"widget": "monetary",
+										"from_currency": product.currency_id,
+										"display_currency": website.currency_id
+										}'/>
+									</span>
+								</option>
+							</t>
+						</select>
+					</t>
+					<t t-if="variant_id.attribute_id.type == 'radio'">
+						<ul class="list-unstyled">
+							<t t-set="inc" t-value="0"/>
+							<t t-foreach="variant_id.value_ids" t-as="value_id">
+								<li class="form-group js_attribute_value" style="margin: 0;">
+									<label class="control-label" style="margin: 0 20px;">
+										<input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;"/>
+										<span t-field="value_id.name"/>
+										<span class="badge" t-if="value_id.price_extra">
+										<t t-esc="value_id.price_extra > 0 and '+' or ''"/>
+										<span t-field="value_id.price_extra" style="white-space: nowrap;" t-options='{
+											"widget": "monetary",
+											"from_currency": product.currency_id,
+											"display_currency": website.currency_id
+											}'/>
+										</span>
+									</label>
+								</li>
+								<t t-set="inc" t-value="inc+1"/>
+							</t>
+						</ul>
+					</t>
+					<t t-if="variant_id.attribute_id.type == 'color'">
+						<ul class="list-inline">
+							<t t-set="inc" t-value="0"/>
+							<li t-foreach="variant_id.value_ids" t-as="value_id">
+								<label t-attf-style="background-color:#{value_id.html_color or value_id.name}"
+									t-attf-class="css_attribute_color #{'active' if not inc else ''}">
+								<input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None"
+									t-att-checked="'checked' if not inc else None"
+									t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)"
+									t-att-value="value_id.id"
+									t-att-title="value_id.name"/>
+								</label>
+								<t t-set="inc" t-value="inc+1"/>
+							</li>
+						</ul>
+					</t>
+				</li>
+			</t>
+		</ul>
+	</template>
+	<template id="product_details_extend" inherit_id="theme_watch.product_details" name="Product">
+		<xpath expr="//div[@id='product_more_info']" position="replace">
+					<div class="container" id="product_more_info" style="display:none;">
+		<div class="col-md-12 col-xs-12 col-sm-12 pd_info">
+			<center>Dimensions &amp; Additional Information</center>
+			<div class="pd-more-info">
+				<div itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description"/>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="product_more_info">
+			<div class="col-md-12 col-xs-12 col-sm-12 pd_info" style="border-bottom: 2px solid;">
+				<center>
+					<h2>Dimensions &amp; Additional Information</h2>
+				</center>
+			</div>
+			<div class="col-md-12 col-xs-12 col-sm-12 pd_info">
+				<div class="pd-more-info">
+					<div data-oe-model="product.template" data-oe-id="49" data-oe-field="website_description" data-oe-type="html" data-oe-expression="product.website_description" itemprop="description" class="oe_structure mt16" id="product_full_description">
+						<section class="s_feature_grid">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6 col-sm-12 col-xs-12">
+										<div class="col-md-12 mt16 mb16">
+											<h3 class="mb0">
+												<font style="font-size: 18px;">Dimensions</font>
+											</h3>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.height">
+												<h5>Height (cm)</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.height">
+												<h5 t-field="product.height"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.length">
+												<h5>Length (cm)</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.length">
+												<h5 t-field="product.length"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.widtht">
+												<h5>Width (cm)</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.widtht">
+												<h5 t-field="product.widtht"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.additional_dimensions">
+												<h5>Additional Dimensions(cm)</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.additional_dimensions">
+												<h5 t-field="product.additional_dimensions"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.packing_dimensions">
+												<h5>Packing Dimensions</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.packing_dimensions">
+												<h5 t-field="product.packing_dimensions"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12 col-xs-12 product-additional">
+										<div class="col-md-12 mb16 mt16">
+											<h3 class="mb0">
+												<font style="font-size: 18px;">Additional Information</font>
+											</h3>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.weight">
+												<h5>Weight (Kg)</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.weight">
+												<h5 t-field="product.weight"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.material">
+												<h5>Material</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.material">
+												<h5 t-field="product.material"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.finish">
+												<h5>Finish</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.finish">
+												<h5 t-field="product.finish"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.assembly">
+												<h5>Assembly</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.assembly">
+												<h5 t-field="product.assembly"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.caring_instructions">
+												<h5>Caring Instructions</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.caring_instructions">
+												<h5 t-field="product.caring_instructions"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.special_features">
+												<h5>Special Features</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.special_features">
+												<h5 t-field="product.special_features"/>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.alternative_product_ids">
+												<h5>Alternative Sizes</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.alternative_product_ids">
+												<h5>
+													<t t-foreach="product.alternative_product_ids" t-as="alternative">
+														<a t-att-href="'/shop/product/%s' % alternative.id">
+															<span t-field="alternative.sizes"/>
+															<t t-if="alternative.sizes">,</t>
+														</a>
+													</t>
+												</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.sku_code">
+												<h5>SKU</h5>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6" t-if="product.sku_code">
+												<h5 t-field="product.sku_code"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section t-if="product.alternative_product_ids" class="as-content-feature-1" style="padding: 0px 0 30px;">
+			<div class="container">
+				<div class="row">
+					<div class="seaction-head">
+						<h1>ITEMS YOU MIGHT LIKE</h1>
+					</div>
+					<div class="col-md-12">
+						<div class="owl-carousel owl-theme owl-cutom">
+							<div t-foreach="product.alternative_product_ids" t-as="alternative" class="item">
+								<a class="thumbnail thumbnail-cutom text-center" t-att-href="'/shop/product/%s' % alternative.id" style="width: 362px;height: 350px;">
+									<img t-att-alt="alternative.name" t-att-src="'data:image/png;base64,%s' % alternative.image"/>
+									<p class="text-center" t-field="alternative.name"/>
+								</a>
+								<p class="text-center">
+									<strong>
+									<span t-field="alternative.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+									</strong>
+								</p>
+								<a class="thumbnail thumbnail-cutom text-center" t-att-href="'/shop/product/%s' % alternative.id" style="width: 360px;">
+									<p class="btn btn-success text-center">ADD TO CART</p>
+								</a>
+							</div>
+						</div>
+						<script>
+							$('.owl-carousel').owlCarousel({
+								loop:true,
+								nav:true,
+								responsive:{
+									0:{
+										items:1
+									},
+									1200:{
+										items:3
+									},
+								}
+							})
+						</script>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style="padding: 0px 0 30px;" class="as-content-feature-1">
+			<div class="container">
+				<div class="col-md-4 col-sm-12 col-xs-12" id="fe-content">
+					<div class="container text-center" style="border: 2px solid;padding: 16px;">
+						<div class="as-card" style="margin-bottom:0px;">
+							<div class="i-con" style="background: transparent;">
+								<span class="fa fa-truck fa-5x" style="color: #000;" data-original-title="" title=""/>
+							</div>
+							<div class="asc-text text-left">
+								<h5 class="o_default_snippet_text">DELIVERED TO YOUR DOOR</h5>
+								<p>Find out about or delivery rates</p>
+							</div>
+						</div>
+						<button class="btn btn-success" style="font-size: 15px;padding: 10px;">READ MORE &amp;gt;</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12" id="fe-content">
+					<div class="container text-center" style="border: 2px solid;padding: 8px;">
+						<div class="as-card" style="margin-bottom:0px;">
+							<div class="i-con" style="background: transparent;">
+								<span class="fa fa-clock-o fa-1x" style="color: #000;"/>
+							</div>
+							<div class="asc-text text-left">
+								<h5>HANDMADE &amp;amp; DISPATCHED WITHIN 6 WEEKS </h5>
+								<p class="o_default_snippet_text">Find out about or dispatch and delivery times</p>
+							</div>
+						</div>
+						<button class="btn btn-success" style="font-size: 15px;padding: 10px;">READ MORE &amp;gt;</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12" id="fe-content">
+					<div class="container text-center" style="border: 2px solid;padding: 16px;">
+						<div class="as-card" style="margin-bottom:0px;">
+							<div class="i-con" style="background: transparent;">
+								<span class="fa fa-refresh fa-1x" style="color: #000;"/>
+							</div>
+							<div class="asc-text text-left">
+								<h5 class="o_default_snippet_text">TABLE CARE</h5>
+								<p class="o_default_snippet_text">Find out about table care guide</p>
+							</div>
+						</div>
+						<button class="btn btn-success" style="font-size: 15px;padding: 10px;">READ MORE &amp;gt;</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		</xpath>
+	</template>
+</odoo>

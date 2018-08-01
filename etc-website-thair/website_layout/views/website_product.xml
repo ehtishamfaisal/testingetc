@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="theme_watch.product_detail_page_bradcum" inherit_id="website_sale.product">
+		<xpath expr="//section[@id='product_detail']" position="before">
+			<hr class="container hr-cutz" style="margin-bottom:0px;"> </hr>
+			<nav class="shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+				<div class="container">
+					<ul class="breadcrumb">
+						<li><a href="/page/homepage">HOME</a></li>
+						<li><a href="/shop/">Kitchen Tables</a></li>
+						<li t-if="category">
+							<a  t-att-href="keep('/shop/category/%s' % slug(category), category=0)" t-field="category.name"/>
+						</li>
+						<li><a href="#"><span t-field="product.name"/></a></li>
+					</ul>
+				</div>
+			</nav>
+			<t t-if="not website.is_breadcum">
+				<t t-if="not (website.bread_cum_image)">
+				<nav class="hidden is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+					<div class="container">
+						<h1>
+							<span t-esc="product.name"/>
+						</h1>
+						<ul class="breadcrumb">
+							<li><a href="/page/homepage">Home</a></li>
+							<li><a href="/shop/"><span t-field="product.name"/></a></li>
+						</ul>
+					</div>
+				</nav>
+			</t>
+			
+			<t t-if="website.bread_cum_image">
+			<t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+			<nav class="hidden is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+				<div class="container">
+					<h1>
+						<span t-esc="product.name"/>
+					</h1>
+					<ul class="breadcrumb">
+						<li><a href="/page/homepage">Home</a></li>
+						<li><a href="/shop/"><span t-field="product.name"/></a></li>
+					</ul>
+				</div>
+			</nav>
+			</t>
+		</t>
+		</xpath>
+		<xpath expr="//ol[@class='breadcrumb']" position="attributes">
+			<attribute name="t-if">website.is_breadcum</attribute>
+		</xpath>
+	</template>
+	
+	<!-- Product Details Page -->
+	<template id="theme_watch.product_details" inherit_id="website_sale.product" name="Product">
+		<xpath expr="//section//div[@class='row']//div[@class='col-sm-3 mb8']" position="replace">
+		</xpath>
+		<xpath expr="//section//div[@class='row']//div[@class='col-sm-2 text-right']" position="replace">
+		</xpath>
+		<xpath expr="//div[@t-field='product.website_description']" position="replace"/>
+		<xpath expr="//section//div[@class='row'][2]" position="replace">
+			<div class="row" id="product_information">
+				<div class="js_product">
+				<div class="col-md-12">
+					<div class="product-img-box">
+						<t t-set="cust_po" t-value="0"></t>
+						<div class="product-image" groups="!website_sale.group_website_multi_image">
+								<a t-att-href="website.image_url(product,'image')" class="slider-popup-product">
+									<span itemprop="image" t-field="product.image" t-options="{'widget': 'image', 'class': 'product_detail_img', 'alt-field': 'name'}" groups="!website_sale.group_website_multi_image" class="main_image"/>
+								</a>
+							</div>
+						<t groups="website_sale.group_website_multi_image">
+						<t t-set="variant_img" t-value="product.product_variant_id"/>
+							<a t-att-href="website.image_url(variant_img,'image')" class="slider-popup-product">
+								<div itemprop="image" t-field="product.product_variant_ids[0].image" 
+								t-options='{"widget": "image", "class": "product_detail_img js_variant_img", "alt-field": "name"}'/>
+							</a>
+							<t t-set="image_ids"  t-value="product.product_image_ids"/>
+						</t>
+						
+						<t t-placeholder="select">
+							<t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
+							<ul t-attf-class="list-unstyled js_add_cart_variants #{ul_class}" t-att-data-attribute_value_ids="attribute_value_ids" id="variant-color" style="display:none;">
+							<t t-foreach="product.attribute_line_ids.sorted(key=lambda x: x.attribute_id.sequence)" t-as="variant_id">
+								<li t-if="len(variant_id.value_ids) > 1">
+								<t t-if="variant_id.attribute_id.type == 'color'">
+								<ul class="list-inline">
+									<t t-set="inc" t-value="0"/>
+									<li t-foreach="variant_id.value_ids" t-as="value_id">
+										<label t-attf-style="background-color:#{value_id.html_color or value_id.name}"
+										t-attf-class="css_attribute_color #{'active' if not inc else ''}" id="product-color-var">
+										<input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None"
+											t-att-checked="'checked' if not inc else None"
+											t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)"
+											t-att-value="value_id.id"
+											t-att-title="value_id.name"/>
+									</label>
+									<t t-set="inc" t-value="inc+1"/>
+									</li>
+								</ul>
+								</t>
+								</li>
+							</t>
+							</ul>
+						</t>
+						</div>
+					
+					<t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 bhoechie-tab-menu" t-att-id="'img-slider-variant' if len(product.product_image_ids) > 3  else ''">
+					<ul class="m">
+							<t t-set="image_ids"  t-value="product.product_image_ids"/>
+							<t t-if="len(product.product_image_ids)" t-foreach="product.product_image_ids" t-as="pimg">
+								<li class="m1 li item">
+									<a t-att-href="website.image_url(pimg,'image')" class="slider-popup-product"/>
+									<img class="img img-responsive sub-images" t-attf-src="/website/image/product.image/{{pimg.id}}/image" t-att-alt="pimg.name"/>
+								</li>
+							</t>
+						</ul>
+				</div>
+				<div class="col-md-5">
+					<div class="product-shop-info col-md-12" id="product_details">
+						<h1><span t-field="product.name"/></h1> 
+						<div class="pro-desc">
+							<p t-field="product.description_sale"/>
+						</div> 
+						<span itemprop="url" style="display:none;" t-esc="'/shop/product/%s' % slug(product)"/>
+						<form t-att-action="keep('/shop/cart/update')" class="js_add_cart_variants" t-att-data-attribute_value_ids="product.product_variant_ids.ids" method="POST">
+							<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+							<div class="js_product">
+							<t t-placeholder="select">
+								<input type="hidden" class="product_id" name="product_id" t-att-value="int(product.product_variant_ids[0]) if len(product.product_variant_ids) == 1 else '0'"/>
+								<t t-call="website_layout.variants_custom">
+									<t t-set="ul_class" t-value="'nav-stacked'"/>
+								</t>
+							</t>
+	
+							<t t-call="website_sale.product_price"/>
+							<p t-if="len(product.product_variant_ids) > 1" class="css_not_available_msg bg-info" style="padding: 15px;">Please Select FINISH</p>
+							<a id="add_to_cart" class="btn btn-primary btn-lg mt8 js_check_product a-submit" href="#">Add to Cart</a>
+						</div>
+						</form>
+					</div> 
+				</div>
+				</div>
+			</div>
+			<div class="row" id="product_more_info">
+				<div class="col-md-9 pd_info">
+					<div class="pd-more-info">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#more_info" aria-controls="more_info" role="tab" data-toggle="tab">
+								Specification</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="more_info">
+								<div itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xpath>	
+		<xpath expr="//section[@id='product_detail']" position="after">
+			<div class="oe_structure"/>
+		</xpath>
+	</template>
+	
+	<template id="theme_watch.product_details_advertice" inherit_id="theme_watch.product_details">
+		<xpath expr="//div[@id='product_information']//div[@class='col-md-5']" position="after">
+			<div class="col-md-3 hidden">
+				<div id="as-add-slider" class="carousel s_add_slide slide as-add-slider" data-ride="carousel">
+					Indicators
+					<ol class="carousel-indicators">
+						<li data-target="#as-add-slider" data-slide-to="0" class="active"></li>
+						<li data-target="#as-add-slider" data-slide-to="1"></li>
+						<li data-target="#as-add-slider" data-slide-to="2"></li>
+					</ol>
+					Wrapper for slides
+				<div class="carousel-inner" role="listbox">
+					<div class="item item1 active">
+						<img src="/theme_watch/static/src/img/side-banner-1-220x400.jpg" title="Ticktock" alt="" />
+					</div>
+					<div class="item">
+						<img src="/theme_watch/static/src/img/side-banner-2-220x400.jpg" title="Ticktock" alt="" />
+					</div>
+					<div class="item">
+						<img src="/theme_watch/static/src/img/side-banner-3-220x400.jpg" title="Ticktock" alt="" />
+					</div>
+					Controls
+					<a class="left carousel-control" data-target="#as-add-slider" role="button" data-slide="prev">
+						<span class="fa fa-angle-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" data-target="#as-add-slider" role="button" data-slide="next">
+						<span class="fa fa-angle-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+</odoo>

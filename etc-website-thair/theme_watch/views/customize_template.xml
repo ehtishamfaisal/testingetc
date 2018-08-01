@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="theme_customize" inherit_id="website.theme_customize" name="theme_watch modal">
+    <xpath expr="div" position="replace">
+    <div id="theme_customize_modal" class="modal fade bs-example-modal-sm">
+        <div class="modal-dialog">
+        <div class="container-fluid interface modal-content">
+
+            <div class="row">
+
+                <!-- ======================== Nav tabs ======================== -->
+
+                <div class="col-md-2 left-content">
+
+                    <div class="loading_customize"></div>
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active text-center left-content-block">
+                            <a href="#layout" class="" role="tab" data-toggle="tab"><span class="fa fa-th-list center-block"></span>LAYOUT</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#header-options" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>Header Options</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#footert" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>Footer Color</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#footert-style" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>Footer Style</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#shop-op" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>Shop Style</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#product-op" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>Product Style</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#color" class="" role="tab" data-toggle="tab"><span class="fa fa-pencil center-block"></span>COLORS</a>
+                        </li>
+
+
+
+                        <li class="text-center left-content-block">
+                            <a href="#pattern" class="" role="tab" data-toggle="tab"><span class="fa fa-th center-block"></span> BG PATTERNS</a>
+                        </li>
+
+                        <li class="text-center left-content-block">
+                            <a href="#font" class="" role="tab" data-toggle="tab"><span class="fa fa-font center-block"></span>FONTS</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- ========================= Content ======================== -->
+
+                <div class="col-md-10 right-content">
+
+                    <div class="col-md-12 modal-header">
+                        <button type="button" class="close">×</button>
+                        <h4 class="modal-title text-center" id="small_label_customize">Customize Theme</h4>
+                    </div>
+
+                    <div class="col-md-12 tab-content">
+
+                        <!-- =============== LAYOUT CONTAINER ================= -->
+
+                        <div class="tab-pane active" id="layout">
+                            <div class="col-xs-12">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-layout-combi"><i class="fa fa-desktop"></i></h6>
+                                    <p>Full width</p>
+                                    <input name="layoutvar" type="radio" data-xmlid="theme_watch.option_layout_fullwidth" />
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-layout-combi"><i class="fa fa-arrows-h"></i></h6>
+                                    <p>Boxed</p>
+                                    <input name="layoutvar" type="radio" data-xmlid="theme_watch.option_layout_boxed"/>
+                                </label>
+                            </div>
+                        </div>
+
+    
+
+                        <!-- =============== HEADER CONTAINER ================= -->
+
+                        <div class="tab-pane" id="header-options">
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Options 1</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style1" />
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Option 2</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style2"/>
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Option 3</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style3"/>
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Option 4</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style4"/>
+                                </label>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Option 5</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style5"/>
+                                </label>
+                            </div>
+
+
+
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-header-combi">Header Reset</h6>
+                                    <input name="headeroptions" type="radio" data-xmlid="theme_watch.option_header_style_reset"/>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                        
+                        <!-- =============== Footer CONTAINER ================= -->
+
+                        <div class="tab-pane" id="footert">
+                            
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Light</h6>
+                                    <input name="footervar" type="radio" data-xmlid="theme_watch.option_footer_dark" />
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Dark</h6>
+                                    <input name="footervar" type="radio" data-xmlid="theme_watch.option_footer_light"/>
+                                </label>
+                            </div>
+                             <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Shades of solitude</h6>
+                                    <input name="footervar" type="radio" data-xmlid="theme_watch.option_footer_solitude"/>
+                                </label>
+                            </div>
+                             
+                        </div>
+
+                        <!-- =============== Footer Style CONTAINER ================= -->
+
+                        <div class="tab-pane" id="footert-style">
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Style 1</h6>
+                                    <input name="footer_svar" type="radio" data-xmlid="theme_watch.option_footer_option1" />
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Style 2</h6>
+                                    <input name="footer_svar" type="radio" data-xmlid="theme_watch.option_footer_option2"/>
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-footer-combi">Footer Reset</h6>
+                                    <input name="footer_svar" type="radio" data-xmlid="theme_watch.option_footer_option3"/>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- =============== Shop Style CONTAINER ================= -->
+
+                        <div class="tab-pane" id="shop-op">
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-shopo-combi">Shop Left</h6>
+                                    <input name="shop_svar" type="radio" data-xmlid="theme_watch.option_shop_left" />
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-shopo-combi">Shop Right</h6>
+                                    <input name="shop_svar" type="radio" data-xmlid="theme_watch.option_shop_right"/>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- =============== Product Style CONTAINER ================= -->
+
+                        <div class="tab-pane" id="product-op">
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi">
+                                    <h6 class="text-center modal-h6 chd-shopo-combi">Option 1</h6>
+                                    <input name="product_svar" type="radio" data-xmlid="theme_watch.option_product1" />
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-shopo-combi">Option 2</h6>
+                                    <input name="product_svar" type="radio" data-xmlid="theme_watch.option_product2"/>
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="chd-layout-combi" >
+                                    <h6 class="text-center modal-h6 chd-shopo-combi">Reset</h6>
+                                    <input name="product_svar" type="radio" data-xmlid="theme_watch.option_product1_reset"/>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- =============== COLOR CONTAINER ================= -->
+
+                        <div class="tab-pane" id="color">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 1</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset1">
+                                           
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset1" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 2</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset2">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset2" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 3</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset3">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset3" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 4</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset4">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset4" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 5</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset5">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset5" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 6</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset6">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset6" />
+                                    </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 7</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset7">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset7" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 8</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset8">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset8" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 9</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset9">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset9" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 10</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset10">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset10" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 11</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset11">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset11" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 12</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset12">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset12" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 13</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset13">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset13" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 14</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset14">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset14" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 15</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset15">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset15" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 16</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset16">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset16" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 17</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset17">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset17" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="text-center">Color Preset 18</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset18">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset18" />
+                                    </label>
+                                </div>
+								<div class="col-xs-12">
+                                    <p class="text-center">Color Preset 19</p>
+                                    <label class="chd-color-combi">
+                                        <div class="row colorPreset19">
+                                            
+                                        </div>
+                                        <input name="colorvar" type="radio" data-xmlid="theme_watch.option_colorPreset19" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- =============== BG PATTERN CONTAINER ================= -->
+
+                        <div class="tab-pane" id="pattern">
+                            <div class="row">
+
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-1">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_01" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-2">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_02" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-3">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_03" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-4">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_04" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-5">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_05" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-6">                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_06" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-7">
+                                       
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_07" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-8">
+                                       
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_08" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-9">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_09" />
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="chd-pattern-combi pattern-swatch pattern-10">
+                                        
+                                        <input name="bgcolorvar" type="radio" data-xmlid="theme_watch.option_bg_pattern_10" />
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- =============== FONT CONTAINER ================= -->
+
+                        <div class="tab-pane" id="font">
+                            <div class="row">
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: Roboto,sans-serif; font-size: 30px">Roboto</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_helvetica" />
+                                  </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: 'Open Sans',sans-serif; font-size: 30px">Open Sans</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_ubuntu" />
+                                  </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: 'Josefin Sans',sans-serif; font-size: 30px">Josefin Sans</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_sourcesanspro" />
+                                  </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: Abel,sans-serif; font-size: 30px">Abel</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_rajdhani" />
+                                  </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: Droid Serif; font-size: 30px">Droid Serif</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_raleway" />
+                                  </label>
+                                </div>
+
+                                <div class="col-xs-12">
+                                  <label class="chd-fonts-combi center-block">
+                                    <h4 style="font-family: Alice,sans-serif; font-size: 30px">Alice</h4>
+                                    <input name="fontvar" type="radio" data-xmlid="theme_watch.option_font_roboto" />
+                                  </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </xpath>
+    </template>
+
+<!-- ===================== LAYOUT OPTIONS ======================== -->
+
+<template id="option_layout_fullwidth" name="theme_watch_option_layout_fullwidth" inherit_id="website.assets_frontend" active="True">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/layout/full-width.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_layout_boxed" name="theme_watch_option_layout_boxed" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/layout/boxed.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+
+
+<!-- ===================== HEADER Style ======================== -->
+
+<template id="option_header_style1" name="theme_watch_option_header_style1" inherit_id="website.assets_frontend" active="True">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/header-option/option_header_style1.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_header_style2" name="theme_watch_option_header_style2" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/header-option/option_header_style2.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_header_style3" name="theme_watch_option_header_style3" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/header-option/option_header_style3.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_header_style4" name="theme_watch_option_header_style4" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/header-option/option_header_style4.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_header_style5" name="theme_watch_option_header_style5" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/header-option/option_header_style5.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_header_style_reset" name="theme_watch_option_header_style_reset" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/as_header.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+
+
+
+
+<!-- ===================== Footer OPTIONS ======================== -->
+
+<template id="option_footer_light" name="theme_watch_option_footer_light" inherit_id="website.assets_frontend" active="True">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/as_footer.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_footer_dark" name="theme_watch_option_footer_dark" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/footer/as_footer-light.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_footer_solitude" name="theme_watch_option_as_footer-solitude" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/footer/as_footer-solitude.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<!-- ===================== Footer Style OPTIONS ======================== -->
+
+<template id="option_footer_option1" name="theme_watch_option_footer_option1" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/footer/as_footer-option1.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+<template id="option_footer_option2" name="theme_watch_option_footer_option2" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/footer/as_footer-option2.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_footer_option3" name="theme_watch_option_footer_option3" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/as_footer.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+
+<!-- ===================== Shop Style OPTIONS ======================== -->
+
+<template id="option_shop_left" name="theme_watch_option_shop_left" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/shop/as_shop_left.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_shop_right" name="theme_watch_option_shop_right" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/shop/as_shop_right.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<!-- ===================== Products Style OPTIONS ======================== -->
+
+<template id="option_product1" name="theme_watch_option_product1" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/products/as_product1.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_product2" name="theme_watch_option_product2" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/products/as_product2.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+<template id="option_product1_reset" name="theme_watch_option_product1_reset" inherit_id="website.assets_frontend" active="False">
+    <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/as_products.less" rel="stylesheet" type="text/less"/></xpath>
+</template>
+
+
+
+
+
+<!-- ===================== COLOR OPTIONS ======================== -->
+
+    <template id="option_colorPreset1" name="option_colorPreset1" inherit_id="website.assets_frontend" active="False">
+       <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-1.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset2" name="option_colorPreset2" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-2.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset3" name="option_colorPreset3" inherit_id="website.assets_frontend" active="True">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-3.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset4" name="option_colorPreset4" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-4.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset5" name="option_colorPreset5" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-5.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset6" name="option_colorPreset6" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-6.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+
+
+    <template id="option_colorPreset7" name="option_colorPreset7" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-7.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset8" name="option_colorPreset8" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-8.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset9" name="option_colorPreset9" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-9.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+     <template id="option_colorPreset10" name="option_colorPreset10" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-10.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset11" name="option_colorPreset11" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-11.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+     <template id="option_colorPreset12" name="option_colorPreset12" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-12.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset13" name="option_colorPreset13" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-13.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset14" name="option_colorPreset14" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-14.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset15" name="option_colorPreset15" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-15.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset16" name="option_colorPreset16" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-16.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset17" name="option_colorPreset17" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-17.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    <template id="option_colorPreset18" name="option_colorPreset18" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-18.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+	<template id="option_colorPreset19" name="option_colorPreset19" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/theme_watch/static/src/less/options/colors/color-19.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+    
+    
+
+
+<!-- ===================== FONT OPTIONS ======================== -->
+
+
+    <template id="option_font_helvetica" name="option_font_helvetica" inherit_id="website.assets_frontend" active="True">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/alegreya-roboto.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_font_ubuntu" name="option_font_ubuntu" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/dosis-opensans.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_font_sourcesanspro" name="option_font_sourcesanspro" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/josefin-amatic.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_font_rajdhani" name="option_font_rajdhani" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/medula-abel.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_font_raleway" name="option_font_raleway" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/oswald-droid.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_font_roboto" name="option_font_roboto" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/fonts/playfare-alice.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+
+<!-- ===================== PATTERN OPTIONS ======================== -->
+
+    <template id="option_bg_pattern_01" name="option_bg_pattern_01" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_01.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_02" name="option_bg_pattern_02" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_02.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_03" name="option_bg_pattern_03" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_03.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_04" name="option_bg_pattern_04" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_04.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_05" name="option_bg_pattern_05" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_05.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_06" name="option_bg_pattern_06" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_06.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_07" name="option_bg_pattern_07" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_07.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_08" name="option_bg_pattern_08" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_08.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_09" name="option_bg_pattern_09" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_09.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+    <template id="option_bg_pattern_10" name="option_bg_pattern_10" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside"><link href="/theme_watch/static/src/less/options/patterns/option_bg_pattern_10.less" rel="stylesheet" type="text/less"/></xpath>
+    </template>
+
+   </odoo>
+
+

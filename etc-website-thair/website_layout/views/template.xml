@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!--	==============================| Page Breadcum |==============================	-->
+	<template id="theme_watch.breadcum_shop" inherit_id="website_sale.products"  active="False" customize_show="False" name="Page Breadcum">
+		<xpath expr="//div[@id='wrap']//div[@class='oe_structure']" position="before">
+			<hr class="hr-cutz container"> </hr>
+			<t t-if="not website.is_breadcum">
+				<t t-if="website.bread_cum_image">
+					<t t-set="bread_cum" t-value="website.image_url(website,'bread_cum_image')"/>
+					<nav class="hidden is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs" t-attf-style="background-image:url(#{bread_cum}#)">
+						<t t-call="theme_watch.shop_page_bradcum" />  
+					</nav>
+				</t>
+				<t t-if="not website.bread_cum_image">
+					<nav class="hidden is-breadcrumb shop-breadcrumb" role="navigation" aria-label="breadcrumbs">
+					<t t-call="theme_watch.shop_page_bradcum" />
+					</nav>
+				</t>
+			</t>
+		</xpath>
+	</template>
+	
+	<!--	==============================| Product Category Layout |==============================	-->
+	<template id="website_sale.products_categories" inherit_id="website_sale.products" active="False" customize_show="True" name="Product Categories">
+		<xpath expr="//div[@id='products_grid_before']" position="inside">
+			<ul class="nav nav-pills nav-stacked mt16">
+				<li t-att-class=" '' if category else 'active' ">
+					<a t-att-href="keep('/shop',category=0)" class="o_not_editable">All Products</a>
+				</li>
+				<t t-foreach="categories" t-as="c">
+					<t t-call="website_sale.categories_recursive" />
+				</t>
+			</ul>
+		</xpath>
+		<xpath expr="//div[@id='products_grid_before']" position="attributes">
+			<attribute name="class">col-md-2 col-sm-4 col-xs-12</attribute>
+		</xpath>
+		<xpath expr="//div[@id='products_grid']" position="attributes">
+			<attribute name="class">col-md-10 col-sm-8</attribute>
+		</xpath>
+	</template>
+
+	<!--	==============================| Product Attributes Filter |==============================	-->
+	<template id="website_sale.products_attributes" inherit_id="website_sale.products" active="False" customize_show="True" name="Product Attribute's Filters">
+		<xpath expr="//div[@id='products_grid_before']" position="inside">
+			<form class="js_attributes" method="get">
+				<input type="hidden" name="search" t-att-value="search" />
+				<ul class="nav nav-pills nav-stacked mt16">
+					<t t-foreach="attributes" t-as="a">
+						<t t-if="a.type != 'hidden'">
+							<li t-if="a.value_ids and len(a.value_ids) &gt; 1">
+								<div>
+									<strong t-field="a.name" />
+								</div>
+								<t t-if="a.type == 'select'">
+									<select class="form-control" name="attrib">
+										<option value="" />
+										<t t-foreach="a.value_ids" t-as="v">
+											<option t-att-value="'%s-%s' % (a.id,v.id)" t-esc="v.name" t-att-selected="v.id in attrib_set" />
+										</t>
+									</select>
+								</t>
+								<t t-if="a.type == 'radio'">
+									<ul class="nav nav-pills nav-stacked">
+										<t t-foreach="a.value_ids" t-as="v">
+											<li t-att-class="'active' if v.id in attrib_set else None">
+												<label style="margin: 0 20px;">
+													<input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else None" />
+													<span style="font-weight: normal" t-field="v.name" />
+												</label>
+											</li>
+										</t>
+									</ul>
+								</t>
+								<t t-if="a.type == 'color'">
+									<t t-foreach="a.value_ids" t-as="v">
+										<label t-attf-style="background-color:#{v.html_color or v.name}" t-attf-class="css_attribute_color #{'active' if v.id in attrib_set else ''}">
+											<input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else None" t-att-title="v.name" />
+										</label>
+									</t>
+								</t>
+							</li>
+						</t>
+					</t>
+				</ul>
+			</form>
+		</xpath>
+		
+		<xpath expr="//div[@id='products_grid_before']" position="attributes">
+			<attribute name="class">col-md-2 hidden-xs</attribute>
+		</xpath>
+		
+		<xpath expr="//div[@id='products_grid']" position="attributes">
+			<attribute name="class">col-md-10</attribute>
+		</xpath>
+	</template>
+	
+	<template id="cart_lines" inherit_id="website_sale.cart_lines" name="Shopping Cart Lines">
+		<xpath expr="//table[@id='cart_products']/tbody/t/tr/td[3]/div[2]" position="attributes">
+			<attribute name="class">hidden</attribute>
+		</xpath>
+	 </template>
+</odoo>
